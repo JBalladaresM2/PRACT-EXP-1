@@ -39,7 +39,7 @@ function ejercicio_4() {
     const cadena_1 = "Garcia"
     const cadena_2 = "Perez"
 
-    if (cadena_1.length < cadena_2.length) {
+    if (cadena_1.length > cadena_2.length) {
         console.log(`"${cadena_1}" tiene mas letras`)
     } else {
         console.log(`"${cadena_2}" tiene mas letras`)
@@ -50,13 +50,13 @@ function ejercicio_4() {
 function ejercicio_5() {
     const nombre_completo = "Ana Maria Torres"
     const segmentos = nombre_completo.split(" ")
-    let inciales = ""
+    let iniciales = ""
 
     for (let i = 0; i < segmentos.length; i++) {
-        inciales += `${segmentos[i][0]}.`
+        iniciales += `${segmentos[i][0]}.`
     }
 
-    console.log(`${inciales}`)
+    console.log(`${iniciales}`)
 }
 
 // 6. Reemplazo de caracteres
@@ -136,8 +136,7 @@ function ejercicio_10() {
 
 // 1. Contar caracteres de varias palabras
 function ejercicio_11() {
-    let fruta = ""
-    let frutas = []
+    let fruta, frutas = []
 
     while (true) {
         fruta = prompt("Ingresa un fruta:") // dejar vacio para dejar de agregar
@@ -155,9 +154,7 @@ function ejercicio_11() {
 
 // 2. Contar apariciones de una letra en varias frases
 function ejercicio_12() {
-    let frase = ""
-    let frases = []
-    let veces = 0
+    let frase, frases = [], veces = 0
 
     while (true) {
         frase = prompt("Ingresa una frase:") // dejar vacio para dejar de agregar
@@ -184,9 +181,7 @@ function ejercicio_12() {
 
 // 3. Invertir varios textos
 function ejercicio_13() {
-    let texto = ""
-    let textos = []
-    let texto_invertido = ""
+    let texto, textos = [], texto_invertido
 
     while (true) {
         texto = prompt("Ingresa un texto:") // dejar vacio para dejar de agregar
@@ -198,12 +193,94 @@ function ejercicio_13() {
     }
 
     for (let i = 0; i < textos.length; i++) {
+        texto_invertido = ""
+
         for (let j = textos[i].length - 1; j >= 0; j--) {
             texto_invertido += textos[i][j]
         }
 
         console.log(`${textos[i]} -> ${texto_invertido}`)
-        texto_invertido = ""
+    }
+}
+
+// 4. Comparar longitudes de pares de palabras en arreglo
+function ejercicio_14() {
+    let cadena_1, cadena_2, cadenas = []
+
+    while (true) {
+        cadena_1 = prompt("Ingresa un texto:") // dejar vacio para dejar de agregar
+        if (cadena_1 === "") {
+            break
+        }
+        cadena_2 = prompt("Ingresa otro texto:") // dejar vacio para dejar de agregar
+        if (cadena_2 === "") {
+            break
+        }
+        cadenas.push([cadena_1, cadena_2])
+    }
+
+    for (let i = 0; i < cadenas.length; i++) {
+        if (cadenas[i][0].length > cadenas[i][1].length) {
+            console.log(`"${cadenas[i][0]}" tiene mas letras que "${cadenas[i][1]}"`)
+        } else {
+            console.log(`"${cadenas[i][1]}" tiene mas letras que "${cadenas[i][0]}"`)
+        }
+    }
+}
+
+// 5. Iniciales de varios nombres completos
+function ejercicio_15() {
+    let nombre_completo, nombres = [], segmentos, iniciales
+
+    while (true) {
+        nombre_completo = prompt("Ingresa nombre completo:") // dejar vacio para dejar de agregar
+        if (nombre_completo != "") {
+            nombres.push(nombre_completo)
+        } else {
+            break
+        }
+    }
+
+    for (let i = 0; i < nombres.length; i++) {
+        iniciales = ""
+        segmentos = nombres[i].split(" ")
+
+        for (let j = 0; j < segmentos.length; j++) {
+            iniciales += `${segmentos[j][0]}.`
+        }
+
+        console.log(`${nombres[i]} -> ${iniciales}`)
+    }
+}
+
+// 6. Reemplazo de caracteres en varios textos
+function ejercicio_16() {
+    let palabra, palabras = [], resultado
+    
+    while (true) {
+        palabra = prompt("Ingresa palabra:") // dejar vacio para dejar de agregar
+        if (palabra != "") {
+            palabras.push(palabra)
+        } else {
+            break
+        }
+    }
+
+    const letra = prompt("Ingresa letra a reemplazar:")
+    const reemplazo = prompt("Ingresa reemplazo:")
+
+    for (let i = 0; i < palabras.length; i++) {
+        resultado = ""
+
+        for (let j = 0; j < palabras[i].length; j++) {
+            if (palabras[i][j] === letra) {
+                resultado += reemplazo
+            } else {
+                resultado += palabras[i][j]
+            }
+        }
+
+        console.log(`${resultado}`)
     }
 }
 

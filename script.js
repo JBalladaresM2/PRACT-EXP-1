@@ -207,6 +207,25 @@ function ejercicio_13() {
     }
 }
 
+
+// 7. Polindromo en un arreglo 
+function ejercicio_17(){
+    palabra=["radar" , "oso" , "casa "]
+for(let p of palabra ){
+     let palabras_invertida = "";
+
+    for (let i = p.length - 1; i >= 0; i--) {
+        palabras_invertida += p[i]
+    }
+
+    if (p === palabras_invertida) {
+        console.log(`La palabra "${p}" es palindroma`)
+    } else {
+        console.log(`Tu palabra ${p} no es palindroma`)
+    }
+}
+}
+
 //========================================================================
 // -------- BLOQUE 3 --------
 //========================================================================

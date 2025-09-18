@@ -303,6 +303,25 @@ for(let p of palabra ){
 }
 }
 
+
+// Mayor numero de Caracteres
+function ejercicio_18(){        //0                                     //1
+    const palabra=[["Me gusta el futbol","Prefiero el baloncesto"],["Hola", "Adios"]]
+                        //0                     //1                 //0      //1
+    for(const[a,b] of palabra){
+
+     if(a.length > b.length){
+     console.log(`"${a}" tiene mas caracteres ( ${a.length}) que "${b}" (${b.length})`)
+     }else if (a.length<b.length){
+        console.log(`La palabra ${b} tiene mas caracteres  ${b.length} que ${a} ${a.length}`)
+     }else{
+        console.log(`Ambos tienen los mismos caracteres`)
+     }
+
+
+     }
+    }
+    
 //========================================================================
 // -------- BLOQUE 3 --------
 //========================================================================

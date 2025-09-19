@@ -1,6 +1,7 @@
 //========================================================================
 // -------- BLOQUE 1 --------
 //========================================================================
+
 // 1. Contar caracteres de una palabra
 function ejercicio_1() {
     const palabra = "Ingenieria"
@@ -35,10 +36,7 @@ function ejercicio_3() {
 }
 
 // 4. Comparar longitudes de cadenas
-function ejercicio_4() {
-    const cadena_1 = "Garcia"
-    const cadena_2 = "Perez"
-
+function CompararLongitudes(cadena_1, cadena_2) {
     if (cadena_1.length > cadena_2.length) {
         console.log(`"${cadena_1}" tiene mas letras`)
     } else {
@@ -46,9 +44,12 @@ function ejercicio_4() {
     }
 }
 
+function ejercicio_4() {
+    CompararLongitudes("Garcia", "Perez")
+}
+
 // 5. Iniciales de un nombre completo
-function ejercicio_5() {
-    const nombre_completo = "Ana Maria Torres"
+function InicialesNombre(nombre_completo) {
     const segmentos = nombre_completo.split(" ")
     let iniciales = ""
 
@@ -59,11 +60,12 @@ function ejercicio_5() {
     console.log(`${iniciales}`)
 }
 
+function ejercicio_5() {
+    InicialesNombre("Ana Maria Torres")
+}
+
 // 6. Reemplazo de caracteres
-function ejercicio_6() {
-    let palabra = "Ingenieria"
-    const letra = "e"
-    const reemplazo = "3"
+function ReemplazarCaracteres(palabra, letra, reemplazo) {
     let resultado = ""
     
     for (let i = 0; i < palabra.length; i++) {
@@ -75,6 +77,10 @@ function ejercicio_6() {
     }
 
     console.log(`${resultado}`)
+}
+
+function ejercicio_6() {
+    ReemplazarCaracteres("Ingenieria", "e", "3")
 }
 
 // 7. Palabra palíndroma
@@ -220,17 +226,13 @@ function ejercicio_14() {
     }
 
     for (let i = 0; i < cadenas.length; i++) {
-        if (cadenas[i][0].length > cadenas[i][1].length) {
-            console.log(`"${cadenas[i][0]}" tiene mas letras que "${cadenas[i][1]}"`)
-        } else {
-            console.log(`"${cadenas[i][1]}" tiene mas letras que "${cadenas[i][0]}"`)
-        }
+        CompararLongitudes(cadenas[i][0], cadenas[i][1])
     }
 }
 
 // 5. Iniciales de varios nombres completos
 function ejercicio_15() {
-    let nombre_completo, nombres = [], segmentos, iniciales
+    let nombre_completo, nombres = []
 
     while (true) {
         nombre_completo = prompt("Ingresa nombre completo:") // dejar vacio para dejar de agregar
@@ -242,20 +244,14 @@ function ejercicio_15() {
     }
 
     for (let i = 0; i < nombres.length; i++) {
-        iniciales = ""
-        segmentos = nombres[i].split(" ")
-
-        for (let j = 0; j < segmentos.length; j++) {
-            iniciales += `${segmentos[j][0]}.`
-        }
-
-        console.log(`${nombres[i]} -> ${iniciales}`)
+        InicialesNombre(nombres[i])
     }
+    
 }
 
 // 6. Reemplazo de caracteres en varios textos
 function ejercicio_16() {
-    let palabra, palabras = [], resultado
+    let palabra, palabras = []
     
     while (true) {
         palabra = prompt("Ingresa palabra:") // dejar vacio para dejar de agregar
@@ -270,17 +266,7 @@ function ejercicio_16() {
     const reemplazo = prompt("Ingresa reemplazo:")
 
     for (let i = 0; i < palabras.length; i++) {
-        resultado = ""
-
-        for (let j = 0; j < palabras[i].length; j++) {
-            if (palabras[i][j] === letra) {
-                resultado += reemplazo
-            } else {
-                resultado += palabras[i][j]
-            }
-        }
-
-        console.log(`${resultado}`)
+        ReemplazarCaracteres(palabras[i], letra, reemplazo)
     }
 }
 

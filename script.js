@@ -270,6 +270,44 @@ function ejercicio_16() {
     }
 }
 
+
+// 7. Polindromo en un arreglo 
+function ejercicio_17(){
+    palabra=["radar" , "oso" , "casa "]
+for(let p of palabra ){
+     let palabras_invertida = "";
+
+    for (let i = p.length - 1; i >= 0; i--) {
+        palabras_invertida += p[i]
+    }
+
+    if (p === palabras_invertida) {
+        console.log(`La palabra "${p}" es palindroma`)
+    } else {
+        console.log(`Tu palabra ${p} no es palindroma`)
+    }
+}
+}
+
+
+// Mayor numero de Caracteres
+function ejercicio_18(){        //0                                     //1
+    const palabra=[["Me gusta el futbol","Prefiero el baloncesto"],["Hola", "Adios"]]
+                        //0                     //1                 //0      //1
+    for(const[a,b] of palabra){
+
+     if(a.length > b.length){
+     console.log(`"${a}" tiene mas caracteres ( ${a.length}) que "${b}" (${b.length})`)
+     }else if (a.length<b.length){
+        console.log(`La palabra ${b} tiene mas caracteres  ${b.length} que ${a} ${a.length}`)
+     }else{
+        console.log(`Ambos tienen los mismos caracteres`)
+     }
+
+
+     }
+    }
+    
 //========================================================================
 // -------- BLOQUE 3 --------
 //========================================================================

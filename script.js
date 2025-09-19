@@ -13,7 +13,7 @@ function ejercicio_2() {
     const frase = "Ingenieria en Software"
     const letra = "e"
     let veces = 0
-    
+
     for (let i = 0; i < frase.length; i++) {
         if (frase[i] === letra) {
             veces++
@@ -67,7 +67,7 @@ function ejercicio_5() {
 // 6. Reemplazo de caracteres
 function ReemplazarCaracteres(palabra, letra, reemplazo) {
     let resultado = ""
-    
+
     for (let i = 0; i < palabra.length; i++) {
         if (palabra[i] === letra) {
             resultado += reemplazo
@@ -116,7 +116,7 @@ function ejercicio_9() {
     const frase = prompt("Escribe una frase:")
     const letra = prompt("Ingresa un caracter:")
     let veces = 0
-    
+
     for (let i = 0; i < frase.length; i++) {
         if (frase[i] === letra) {
             veces++
@@ -173,14 +173,14 @@ function ejercicio_12() {
 
     const letra = prompt("Ingresa un caracter:")
 
-    
+
     for (let i = 0; i < frases.length; i++) {
         for (let j = 0; j < frases[i].length; j++) {
             if (frases[i][j] === letra) {
                 veces++
             }
         }
-        console.log(`La letra "${letra}" se repite ${veces} veces en la frase #${i+1} "${frases[i]}".`)
+        console.log(`La letra "${letra}" se repite ${veces} veces en la frase #${i + 1} "${frases[i]}".`)
         veces = 0
     }
 }
@@ -246,13 +246,13 @@ function ejercicio_15() {
     for (let i = 0; i < nombres.length; i++) {
         InicialesNombre(nombres[i])
     }
-    
+
 }
 
 // 6. Reemplazo de caracteres en varios textos
 function ejercicio_16() {
     let palabra, palabras = []
-    
+
     while (true) {
         palabra = prompt("Ingresa palabra:") // dejar vacio para dejar de agregar
         if (palabra != "") {
@@ -272,47 +272,47 @@ function ejercicio_16() {
 
 
 // 7. Polindromo en un arreglo 
-function ejercicio_17(){
-    palabra=["radar" , "oso" , "casa "]
-for(let p of palabra ){
-     let palabras_invertida = "";
+function ejercicio_17() {
+    palabra = ["radar", "oso", "casa"]
+    for (let p of palabra) {
+        let palabras_invertida = "";
 
-    for (let i = p.length - 1; i >= 0; i--) {
-        palabras_invertida += p[i]
-    }
+        for (let i = p.length - 1; i >= 0; i--) {
+            palabras_invertida += p[i]
+        }
 
-    if (p === palabras_invertida) {
-        console.log(`La palabra "${p}" es palindroma`)
-    } else {
-        console.log(`Tu palabra ${p} no es palindroma`)
+        if (p === palabras_invertida) {
+            console.log(`La palabra "${p}" es palindroma`)
+        } else {
+            console.log(`Tu palabra ${p} no es palindroma`)
+        }
     }
-}
 }
 
 
 // Mayor numero de Caracteres
-function ejercicio_18(){        //0                                     //1
-    const palabra=[["Me gusta el futbol","Prefiero el baloncesto"],["Hola", "Adios"]]
-                        //0                     //1                 //0      //1
-    for(const[a,b] of palabra){
+function ejercicio_18() {        //0                                     //1
+    const palabra = [["Me gusta el futbol", "Prefiero el baloncesto"], ["Hola", "Adios"]]
+    //0                     //1                 //0      //1
+    for (const [a, b] of palabra) {
 
-     if(a.length > b.length){
-     console.log(`"${a}" tiene mas caracteres ( ${a.length}) que "${b}" (${b.length})`)
-     }else if (a.length<b.length){
-        console.log(`La palabra ${b} tiene mas caracteres  ${b.length} que ${a} ${a.length}`)
-     }else{
-        console.log(`Ambos tienen los mismos caracteres`)
-     }
+        if (a.length > b.length) {
+            console.log(`"${a}" tiene mas caracteres ( ${a.length}) que "${b}" (${b.length})`)
+        } else if (a.length < b.length) {
+            console.log(`La palabra ${b} tiene mas caracteres  ${b.length} que ${a} ${a.length}`)
+        } else {
+            console.log(`Ambos tienen los mismos caracteres`)
+        }
 
 
-     }
     }
-    
+}
+
 //========================================================================
 // -------- BLOQUE 3 --------
 //========================================================================
 
-// 1. 
+// 1.
 
 //========================================================================
 // -------- BLOQUE 4 --------

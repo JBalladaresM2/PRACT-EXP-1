@@ -84,8 +84,7 @@ function ejercicio_6() {
 }
 
 // 7. Palabra palíndroma
-function ejercicio_7() {
-    const palabra = "radar"
+function palindroma(palabra) {
     let palabra_invertida = ""
 
     for (let i = palabra.length - 1; i >= 0; i--) {
@@ -95,8 +94,13 @@ function ejercicio_7() {
     if (palabra === palabra_invertida) {
         console.log(`La palabra "${palabra}" es palindroma`)
     } else {
-        console.log(`Tu palabra no es palindroma`)
+        console.log(`Tu palabra "${palabra}" no es palindroma`)
     }
+
+}
+function ejercicio_7() {
+    palindroma("radar");
+
 }
 
 // 8. Frase con mayor cantidad de caracteres
@@ -251,8 +255,9 @@ function ejercicio_15() {
 
 // 6. Reemplazo de caracteres en varios textos
 function ejercicio_16() {
-    let palabra, palabras = [], resultado
-    
+    debugger;
+    let palabra, palabras = []
+
     while (true) {
         palabra = prompt("Ingresa palabra:") // dejar vacio para dejar de agregar
         if (palabra != "") {
@@ -272,29 +277,33 @@ function ejercicio_16() {
 
 
 // 7. Polindromo en un arreglo 
-function ejercicio_17(){
-    palabra=["radar" , "oso" , "casa "]
-for(let p of palabra ){
-     let palabras_invertida = "";
-
-        for (let i = p.length - 1; i >= 0; i--) {
-            palabras_invertida += p[i]
-        }
-
-        if (p === palabras_invertida) {
-            console.log(`La palabra "${p}" es palindroma`)
+function ejercicio_17() {
+    debugger
+    let palabra, palabras = []
+    while (true) {
+        palabra = prompt("Ingrese una palabra para saber si es palindromo")
+        if (palabra !== "") {
+            palabras.push(palabra)
         } else {
-            console.log(`Tu palabra ${p} no es palindroma`)
+            break
         }
+    }
+    for (let i = 0; i < palabras.length; i++) {
+        palindroma(palabras[i]);
+
     }
 }
 
 
+
+
+
+
 // Mayor numero de Caracteres
-function ejercicio_18(){        //0                                     //1
-    const palabra=[["Me gusta el futbol","Prefiero el baloncesto"],["Hola", "Adios"]]
-                        //0                     //1                 //0      //1
-    for(const[a,b] of palabra){
+function ejercicio_18() {        //0                                     //1
+    const palabra = [["Me gusta el futbol", "Prefiero el baloncesto"], ["Hola", "Adios"]]
+    //0                     //1                 //0      //1
+    for (const [a, b] of palabra) {
 
         if (a.length > b.length) {
             console.log(`"${a}" tiene mas caracteres ( ${a.length}) que "${b}" (${b.length})`)

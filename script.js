@@ -104,15 +104,16 @@ function ejercicio_7() {
 }
 
 // 8. Frase con mayor cantidad de caracteres
-function ejercicio_8() {
-    const frase_1 = "Me gusta el fútbol"
-    const frase_2 = "Prefiero el baloncesto"
+function caracteres(a, b) {
 
-    if (frase_1.length < frase_2.length) {
-        console.log(`"${frase_1}" tiene mas caracteres`)
+    if (a.length < b.length) {
+        console.log(`"${a} " tiene mas caracteres que ${b} `)
     } else {
-        console.log(`"${frase_2}" tiene mas caracteres`)
+        console.log(`"${b}" tiene mas caracteres que ${a} `)
     }
+}
+function ejercicio_8() {
+    caracteres("Me gusta el futbol", "Prefiero el baloncesto");
 }
 
 // 9. Contar apariciones de un carácter elegido
@@ -296,26 +297,16 @@ function ejercicio_17() {
 
 
 
-
-
-
 // Mayor numero de Caracteres
-function ejercicio_18() {        //0                                     //1
-    const palabra = [["Me gusta el futbol", "Prefiero el baloncesto"], ["Hola", "Adios"]]
-    //0                     //1                 //0      //1
-    for (const [a, b] of palabra) {
-
-        if (a.length > b.length) {
-            console.log(`"${a}" tiene mas caracteres ( ${a.length}) que "${b}" (${b.length})`)
-        } else if (a.length < b.length) {
-            console.log(`La palabra ${b} tiene mas caracteres  ${b.length} que ${a} ${a.length}`)
-        } else {
-            console.log(`Ambos tienen los mismos caracteres`)
-        }
-
-
+function ejercicio_18() {
+    let bebes = [["me gusta el futbol", "prefiero el baloncesto"], ["hola", "adios"]]
+    for (i = 0; i < bebes.length; i++) {
+        caracteres(bebes[i][0],bebes[i][1]);
     }
 }
+
+
+
 
 //========================================================================
 // -------- BLOQUE 3 --------

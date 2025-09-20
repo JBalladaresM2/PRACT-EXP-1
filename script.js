@@ -299,7 +299,7 @@ function ejercicio_17() {
 
 // Mayor numero de Caracteres
 function ejercicio_18() {
-    let bebes = [["me gusta el futbol", "prefiero el baloncesto"], ["hola", "adios"]]
+    let bebes = [["me gusta el futbol", "prefiero el  baloncesto"], ["hola", "adios"]]
     for (i = 0; i < bebes.length; i++) {
         caracteres(bebes[i][0],bebes[i][1]);
     }

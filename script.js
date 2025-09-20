@@ -307,7 +307,7 @@ function ejercicio_17() {
 // Mayor numero de Caracteres
 function ejercicio_18() {        //0                                     //1
     const palabra = [["Me gusta el futbol", "Prefiero el baloncesto"], ["Hola", "Adios"]]
-    //0                     //1                 //0      //1
+    //0//1                 //0      //1
     for (const [a, b] of palabra) {
 
         if (a.length > b.length) {

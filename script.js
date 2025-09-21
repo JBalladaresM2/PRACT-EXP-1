@@ -315,6 +315,7 @@ function ejercicio_18() {
 
 // 9 N apariciones
 function ejercicio_19() {
+<<<<<<< HEAD
     const N = Number(prompt("¿Cuántas palabras ingresarás?"));
     const letra = prompt("Letra a contar en todas:");
 
@@ -596,5 +597,5 @@ function ejercicio_33() {
     }
 
     console.log(`Mayores de edad: ${cantidad_edades}`)
-}
+>>>>>>> eb1ff31980f1c86f641f5a6de7c9db11c5dd2f8d
 }

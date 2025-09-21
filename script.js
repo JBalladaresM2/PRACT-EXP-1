@@ -128,8 +128,13 @@ function contarfrase(frase, letra) {
 }
 
 function ejercicio_9() {
+<<<<<<< HEAD
     const frase = prompt("Escribe una frase:");
     const letra = prompt("Ingresa un caracter:");
+=======
+    let frase = prompt("Escribe una frase:");
+    let letra = prompt("Ingresa un caracter:");
+>>>>>>> eb1ff31980f1c86f641f5a6de7c9db11c5dd2f8d
     contarfrase(frase, letra);
 }
 
@@ -385,6 +390,146 @@ function ejercicio_23() {
 
     console.log(`Mayores de edad: ${cantidad_edades}`)
 }
+
+//========================================================================
+// -------- BLOQUE 4 --------
+//========================================================================
+
+// 17. Promedio de un arreglo
+function ejercicio_31() {
+    let numero, numeros = [], suma = 0
+
+    while (true) {
+        numero = parseInt(prompt("Ingresa un numero:")) || 0
+        if (numero === 0) {
+            break
+        }
+        numeros.push(numero)
+    }
+
+    const cantidad = numeros.length
+
+    for (let i = 0; i < cantidad; i++) {
+        suma += numeros[i]
+=======
+    let num, nums = []
+    while (true) {
+        num = prompt("Ingrese N veces palabra")
+        if (num === "") {
+            break;
+        }
+        nums.push(num)
+    }
+
+    let letra = prompt("Ingresa un caracter:");
+
+    for (i = 0; i < nums.length; i++) {
+        contarfrase(nums[i], letra)
+    }
+}
+
+//========================================================================
+// -------- BLOQUE 3 --------
+//========================================================================
+
+// 17. Calcular el promedio de 5 números
+function CalcularPromedio(suma, cantidad) {
+    let promedio = suma / cantidad
+    console.log(`Promedio: ${promedio}`)
+}
+
+function ejercicio_21() {
+    let numero, suma
+    const cantidad = 5
+
+    for (let i = 0; i < cantidad; i++) {
+        numero = parseInt(prompt("Ingresa un numero:")) || 0
+        suma += numero
+>>>>>>> eb1ff31980f1c86f641f5a6de7c9db11c5dd2f8d
+    }
+
+    CalcularPromedio(suma, cantidad)
+}
+
+<<<<<<< HEAD
+// 18. Contar impares en un arreglo
+function ejercicio_32() {
+    let numero, numeros = [], cantidad_impares = 0
+
+    while (true) {
+        numero = parseInt(prompt("Ingresa un numero:")) || 0
+        if (numero === 0) {
+            break
+        }
+        numeros.push(numero)
+=======
+// 18. Contar cuántos de 5 números son impares.
+function Impares(numero) {
+    if (numero % 2 != 0) {
+        return true
+>>>>>>> eb1ff31980f1c86f641f5a6de7c9db11c5dd2f8d
+    }
+}
+
+<<<<<<< HEAD
+    for (let i = 0; i < numeros.length; i++) {
+        if (Impares(numeros[i]) === true) {
+=======
+function ejercicio_22() {
+    let numero, cantidad_impares = 0
+    const cantidad = 5
+
+    for (let i = 0; i < cantidad; i++) {
+        numero = parseInt(prompt("Ingresa un numero:")) || 0
+        if (Impares(numero) === true) {
+>>>>>>> eb1ff31980f1c86f641f5a6de7c9db11c5dd2f8d
+            cantidad_impares++
+        }
+    }
+
+    console.log(`Cantidad de impares: ${cantidad_impares}`)
+}
+
+<<<<<<< HEAD
+// 19. Mayores de edad en un arreglo
+function ejercicio_33() {
+    let edad, edades = [], cantidad_edades = 0
+
+    while (true) {
+        edad = parseInt(prompt("Ingresa una edad:")) || 0
+        if (edad === 0) {
+            break
+        }
+        edades.push(edad)
+=======
+// 19. Leer 5 edades y contar cuántos son mayores de edad.
+function MayorDeEdad(edad) {
+    if (edad >= 18) {
+        return true
+>>>>>>> eb1ff31980f1c86f641f5a6de7c9db11c5dd2f8d
+    }
+}
+
+<<<<<<< HEAD
+    for (let i = 0; i < edades.length; i++) {
+        if (MayorDeEdad(edades[i]) === true) {
+=======
+function ejercicio_23() {
+    let edad, cantidad_edades = 0
+    const cantidad = 5
+
+    for (let i = 0; i < cantidad; i++) {
+        edad = parseInt(prompt("Ingresa una edad:")) || 0
+        if (MayorDeEdad(edad) === true) {
+>>>>>>> eb1ff31980f1c86f641f5a6de7c9db11c5dd2f8d
+            cantidad_edades++
+        }
+    }
+
+    console.log(`Mayores de edad: ${cantidad_edades}`)
+}
+<<<<<<< HEAD
+=======
 
 //========================================================================
 // -------- BLOQUE 4 --------

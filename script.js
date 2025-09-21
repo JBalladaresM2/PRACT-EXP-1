@@ -437,8 +437,54 @@ function ejercicio_31() {
 
         let letra = prompt("Ingresa un caracter:");
 
+<<<<<<< HEAD
         for (i = 0; i < nums.length; i++) {
             contarfrase(nums[i], letra)
+=======
+    for (i = 0; i < nums.length; i++) {
+        contarfrase(nums[i], letra)
+    }
+}
+
+//========================================================================
+// -------- BLOQUE 3 --------
+//========================================================================
+
+// 17. Calcular el promedio de 5 números
+function CalcularPromedio(suma, cantidad) {
+    let promedio = suma / cantidad
+    console.log(`Promedio: ${promedio}`)
+}
+
+function ejercicio_21() {
+    let numero, suma
+    const cantidad = 5
+
+    for (let i = 0; i < cantidad; i++) {
+        numero = parseInt(prompt("Ingresa un numero:")) || 0
+        suma += numero
+
+    }
+
+    CalcularPromedio(suma, cantidad)
+}
+
+// 18. Contar cuántos de 5 números son impares.
+function Impares(numero) {
+    if (numero % 2 != 0) {
+        return true
+    }
+}
+
+function ejercicio_22() {
+    let numero, cantidad_impares = 0
+    const cantidad = 5
+
+    for (let i = 0; i < cantidad; i++) {
+        numero = parseInt(prompt("Ingresa un numero:")) || 0
+        if (Impares(numero) === true) {
+            cantidad_impares++
+>>>>>>> 6f295f79b35215c8a8ad32c5d9f1e451431c66ea
         }
     }
 
@@ -452,6 +498,7 @@ function ejercicio_31() {
         console.log(`Promedio: ${promedio}`)
     }
 
+<<<<<<< HEAD
     function ejercicio_21() {
         let numero, suma
         const cantidad = 5
@@ -460,6 +507,7 @@ function ejercicio_31() {
             numero = parseInt(prompt("Ingresa un numero:")) || 0
             suma += numero
 
+=======
 function ejercicio_23() {
     let edad, cantidad_edades = 0
     const cantidad = 5
@@ -468,6 +516,7 @@ function ejercicio_23() {
         edad = parseInt(prompt("Ingresa una edad:")) || 0
         if (MayorDeEdad(edad) === true) {
             cantidad_edades++
+>>>>>>> 6f295f79b35215c8a8ad32c5d9f1e451431c66ea
         }
 
         CalcularPromedio(suma, cantidad)
@@ -477,10 +526,25 @@ function ejercicio_23() {
     function ejercicio_32() {
         let numero, numeros = [], cantidad_impares = 0
 
+<<<<<<< HEAD
+        while (true) {
+            numero = parseInt(prompt("Ingresa un numero:")) || 0
+            if (numero === 0) {
+                break
+            }
+            numeros.push(numero)
+            // 18. Contar cuántos de 5 números son impares.
+            function Impares(numero) {
+                if (numero % 2 != 0) {
+                    return true
+                }
+            }
+=======
 
 //========================================================================
 // -------- BLOQUE 4 --------
 //========================================================================
+>>>>>>> 6f295f79b35215c8a8ad32c5d9f1e451431c66ea
 
             for (let i = 0; i < numeros.length; i++) {
                 if (Impares(numeros[i]) === true) {

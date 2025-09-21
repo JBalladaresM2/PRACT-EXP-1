@@ -404,7 +404,13 @@ function ejercicio_23() {
 
     console.log(`Mayores de edad: ${cantidad_edades}`)
 }
-
+//23 Tabla de multiplicar
+n=parseInt(prompt("Ingrese un numero para q aparesca la tabla"))
+num=parseInt(prompt("ingrese el limite de su tabla "))
+for(let i=0 ; 1<=n;i++){
+    console.log(`Tabla de multiplicar de ${n}
+    ${i}*${n} =${i*n}                                         `)
+}
 //========================================================================
 // -------- BLOQUE 4 --------
 //========================================================================

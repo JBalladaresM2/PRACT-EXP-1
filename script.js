@@ -310,7 +310,7 @@ function ejercicio_18() {
 
 // 9 N apariciones
 function ejercicio_19() {
-    const N = Number(prompt("¿Cuántas palabras ingresarás?"));
+    const N = parseInt(prompt("¿Cuántas palabras ingresarás?"));
     const letra = prompt("Letra a contar en todas:");
 
     for (let i = 1; i <= N; i++) {
@@ -446,7 +446,6 @@ function ejercicio_21() {
     CalcularPromedio(suma, cantidad)
 }
 
-<<<<<<< HEAD
 // 18. Contar impares en un arreglo
 function ejercicio_32() {
     let numero, numeros = [], cantidad_impares = 0

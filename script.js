@@ -301,8 +301,6 @@ function ejercicio_17() {
     }
 }
 
-
-
 // 8 Mayor numero de Caracteres
 function ejercicio_18() {
     let bebes = [["me gusta el futbol", "prefiero el  baloncesto"], ["hola", "adios"]]
@@ -426,6 +424,7 @@ function ejercicio_31() {
 
     for (let i = 0; i < cantidad; i++) {
         suma += numeros[i]
+    }
 
         let num, nums = []
         while (true) {
@@ -461,6 +460,14 @@ function ejercicio_31() {
             numero = parseInt(prompt("Ingresa un numero:")) || 0
             suma += numero
 
+function ejercicio_23() {
+    let edad, cantidad_edades = 0
+    const cantidad = 5
+
+    for (let i = 0; i < cantidad; i++) {
+        edad = parseInt(prompt("Ingresa una edad:")) || 0
+        if (MayorDeEdad(edad) === true) {
+            cantidad_edades++
         }
 
         CalcularPromedio(suma, cantidad)
@@ -470,18 +477,10 @@ function ejercicio_31() {
     function ejercicio_32() {
         let numero, numeros = [], cantidad_impares = 0
 
-        while (true) {
-            numero = parseInt(prompt("Ingresa un numero:")) || 0
-            if (numero === 0) {
-                break
-            }
-            numeros.push(numero)
-            // 18. Contar cuántos de 5 números son impares.
-            function Impares(numero) {
-                if (numero % 2 != 0) {
-                    return true
-                }
-            }
+
+//========================================================================
+// -------- BLOQUE 4 --------
+//========================================================================
 
             for (let i = 0; i < numeros.length; i++) {
                 if (Impares(numeros[i]) === true) {

@@ -332,7 +332,7 @@ function ejercicio_20() {
         } else {
             num.push(n)
             dividir(n)
-            
+
         }
     }
 }
@@ -405,25 +405,40 @@ function ejercicio_23() {
     console.log(`Mayores de edad: ${cantidad_edades}`)
 }
 //23 Tabla de multiplicar
-function ejercicio_233(){
-n=parseInt(prompt("Ingrese un numero para q aparesca la tabla"))
-num=parseInt(prompt("ingrese el limite de su tabla "))
-for(let i=0 ; i<=n;i++){
-    console.log(`Tabla de multiplicar de ${n}
-    ${i}*${n} =${i*n}  `)
-}
+function ejercicio_233() {
+    n = parseInt(prompt("Ingrese un numero para q aparesca la tabla"))
+    num = parseInt(prompt("ingrese el limite de su tabla "))
+    for (let i = 0; i <= n; i++) {
+        console.log(`Tabla de multiplicar de ${n}
+    ${i}*${n} =${i * n}  `)
+    }
 }
 //24  Calcular factorial 
-function ejercicio_24(num){
-let r=1
-    for(let i=2;i<num;i++){
-    r*=i;
+function ejercicio_24(num) {
+    let r = 1
+    for (let i = 2; i < num; i++) {
+        r *= i;
+    }
+    console.log(`Tu numero ${num}! =${r}`)
 }
- console.log(`Tu numero ${num}! =${r}`)
-}
- let num=parseInt(prompt("Ingrese el numero que quiere comprobar"))
+let num = parseInt(prompt("Ingrese el numero que quiere comprobar"))
 ejercicio_24(num)
 
+//leer si son pares
+function ejercicio_25() {
+    let arreglo = []
+    for (let i = 0; i <= 3; i++) {
+        const num = parseInt(prompt(`Ingresa el numero ${i + 1} de 4:`, 10));
+        arreglo.push(num)
+    }
+
+    for (let i = 0; i < arreglo.length; i++) {
+        if (arreglo[i] % 2 === 0) {
+            console.log(`Par: ${arreglo[i]} y su posicion ${i}`)
+
+        }
+    }
+}
 
 
 
@@ -452,16 +467,16 @@ function ejercicio_31() {
         suma += numeros[i]
     }
 
-        let num, nums = []
-        while (true) {
-            num = prompt("Ingrese N veces palabra")
-            if (num === "") {
-                break;
-            }
-            nums.push(num)
+    let num, nums = []
+    while (true) {
+        num = prompt("Ingrese N veces palabra")
+        if (num === "") {
+            break;
         }
+        nums.push(num)
+    }
 
-        let letra = prompt("Ingresa un caracter:");
+    let letra = prompt("Ingresa un caracter:");
 
     for (i = 0; i < nums.length; i++) {
         contarfrase(nums[i], letra)
@@ -519,27 +534,27 @@ function ejercicio_22() {
         console.log(`Promedio: ${promedio}`)
     }
 
-function ejercicio_23() {
-    let edad, cantidad_edades = 0
-    const cantidad = 5
+    function ejercicio_23() {
+        let edad, cantidad_edades = 0
+        const cantidad = 5
 
-    for (let i = 0; i < cantidad; i++) {
-        edad = parseInt(prompt("Ingresa una edad:")) || 0
-        if (MayorDeEdad(edad) === true) {
-            cantidad_edades++
+        for (let i = 0; i < cantidad; i++) {
+            edad = parseInt(prompt("Ingresa una edad:")) || 0
+            if (MayorDeEdad(edad) === true) {
+                cantidad_edades++
+            }
+
+            CalcularPromedio(suma, cantidad)
         }
 
-        CalcularPromedio(suma, cantidad)
-    }
-
-    // 18. Contar impares en un arreglo
-    function ejercicio_32() {
-        let numero, numeros = [], cantidad_impares = 0
+        // 18. Contar impares en un arreglo
+        function ejercicio_32() {
+            let numero, numeros = [], cantidad_impares = 0
 
 
-//========================================================================
-// -------- BLOQUE 4 --------
-//========================================================================
+            //========================================================================
+            // -------- BLOQUE 4 --------
+            //========================================================================
 
             for (let i = 0; i < numeros.length; i++) {
                 if (Impares(numeros[i]) === true) {

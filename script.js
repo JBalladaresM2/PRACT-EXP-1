@@ -121,7 +121,7 @@ function ejercicio_8() {
 function contarfrase(frase, letra) {
     let veces = 0;
     for (let i = 0; i < frase.length; i++) {
-        if (frase[i] === letra) 
+        if (frase[i] === letra)
             veces++;
     }
     console.log(`La letra "${letra}" se repite ${veces} veces en la frase "${frase}"`);
@@ -298,8 +298,6 @@ function ejercicio_17() {
     }
 }
 
-
-
 // 8 Mayor numero de Caracteres
 function ejercicio_18() {
     let bebes = [["me gusta el futbol", "prefiero el  baloncesto"], ["hola", "adios"]]
@@ -318,9 +316,6 @@ function ejercicio_19() {
         contarfrase(palabra, letra);
     }
 }
-
-
-
 
 //========================================================================
 // -------- BLOQUE 3 --------
@@ -406,6 +401,7 @@ function ejercicio_31() {
 
     for (let i = 0; i < cantidad; i++) {
         suma += numeros[i]
+    }
 
     let num, nums = []
     while (true) {
@@ -446,16 +442,6 @@ function ejercicio_21() {
     CalcularPromedio(suma, cantidad)
 }
 
-// 18. Contar impares en un arreglo
-function ejercicio_32() {
-    let numero, numeros = [], cantidad_impares = 0
-
-    while (true) {
-        numero = parseInt(prompt("Ingresa un numero:")) || 0
-        if (numero === 0) {
-            break
-        }
-        numeros.push(numero)
 // 18. Contar cuántos de 5 números son impares.
 function Impares(numero) {
     if (numero % 2 != 0) {
@@ -463,8 +449,6 @@ function Impares(numero) {
     }
 }
 
-    for (let i = 0; i < numeros.length; i++) {
-        if (Impares(numeros[i]) === true) {
 function ejercicio_22() {
     let numero, cantidad_impares = 0
     const cantidad = 5
@@ -486,14 +470,20 @@ function MayorDeEdad(edad) {
     }
 }
 
-    for (let i = 0; i < edades.length; i++) {
-        if (MayorDeEdad(edades[i]) === true) {
+function ejercicio_23() {
+    let edad, cantidad_edades = 0
+    const cantidad = 5
+
+    for (let i = 0; i < cantidad; i++) {
+        edad = parseInt(prompt("Ingresa una edad:")) || 0
+        if (MayorDeEdad(edad) === true) {
             cantidad_edades++
         }
     }
 
     console.log(`Mayores de edad: ${cantidad_edades}`)
 }
+
 
 //========================================================================
 // -------- BLOQUE 4 --------

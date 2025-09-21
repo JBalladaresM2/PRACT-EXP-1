@@ -424,7 +424,7 @@ function ejercicio_24(num) {
 let num = parseInt(prompt("Ingrese el numero que quiere comprobar"))
 ejercicio_24(num)
 
-//leer si son pares
+// 25 leer si son pares
 function ejercicio_25() {
     let arreglo = []
     for (let i = 0; i <= 3; i++) {
@@ -438,6 +438,18 @@ function ejercicio_25() {
 
         }
     }
+}
+// 26  Sumar dos grupos
+function ejercicio_26(){
+const A = [2, 4, 6];
+const B = [1, 3, 5];
+const C = [];
+
+for (let i = 0; i < A.length; i++) {
+  C.push(A[i] + B[i]);
+}
+
+console.log(C); 
 }
 
 

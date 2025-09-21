@@ -405,12 +405,31 @@ function ejercicio_23() {
     console.log(`Mayores de edad: ${cantidad_edades}`)
 }
 //23 Tabla de multiplicar
+function ejercicio_233(){
 n=parseInt(prompt("Ingrese un numero para q aparesca la tabla"))
 num=parseInt(prompt("ingrese el limite de su tabla "))
-for(let i=0 ; 1<=n;i++){
+for(let i=0 ; i<=n;i++){
     console.log(`Tabla de multiplicar de ${n}
-    ${i}*${n} =${i*n}                                         `)
+    ${i}*${n} =${i*n}  `)
 }
+}
+//24  Calcular factorial 
+function ejercicio_24(num){
+let r=1
+    for(let i=2;i<num;i++){
+    r*=i;
+}
+ console.log(`Tu numero ${num}! =${r}`)
+}
+ let num=parseInt(prompt("Ingrese el numero que quiere comprobar"))
+ejercicio_24(num)
+
+
+
+
+
+
+
 //========================================================================
 // -------- BLOQUE 4 --------
 //========================================================================

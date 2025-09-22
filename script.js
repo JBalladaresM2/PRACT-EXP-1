@@ -416,7 +416,7 @@ function ejercicio_233() {
 //24  Calcular factorial 
 function ejercicio_24(num) {
     let r = 1
-    for (let i = 2; i < num; i++) {
+    for (let i = 2; i <= num; i++) {
         r *= i;
     }
     console.log(`Tu numero ${num}! =${r}`)

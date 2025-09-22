@@ -98,6 +98,7 @@ function palindroma(palabra) {
     }
 
 }
+
 function ejercicio_7() {
     palindroma("radar");
 }
@@ -131,8 +132,6 @@ function ejercicio_9() {
     let letra = prompt("Ingresa un caracter:");
     contarfrase(frase, letra);
 }
-
-
 
 // 10. Dividir oración en palabras
 function dividir(frase) {
@@ -299,7 +298,7 @@ function ejercicio_17() {
     }
 }
 
-// 8 Mayor numero de Caracteres
+// 8. Mayor numero de Caracteres
 function ejercicio_18() {
     let bebes = [["me gusta el futbol", "prefiero el  baloncesto"], ["hola", "adios"]]
     for (i = 0; i < bebes.length; i++) {
@@ -307,7 +306,7 @@ function ejercicio_18() {
     }
 }
 
-// 9 N apariciones
+// 9. N apariciones
 function ejercicio_19() {
     const N = parseInt(prompt("¿Cuántas palabras ingresarás?"));
     const letra = prompt("Letra a contar en todas:");
@@ -318,7 +317,7 @@ function ejercicio_19() {
     }
 }
 
-//10 Seperar numeros 
+// 10. Seperar numeros 
 function ejercicio_20() {
     let num = []
     let n;
@@ -399,22 +398,22 @@ function ejercicio_23() {
     console.log(`Mayores de edad: ${cantidad_edades}`)
 }
 
-// 
+// 20. Buscar un valor en 4 números.
 function ejercicio_24() {
 
 }
 
-// 
+// 21. Concatenar 3 palabras.
 function ejercicio_25() {
 
 }
 
-// 
+// 22. Calcular el cubo de 3 números.
 function ejercicio_26() {
 
 }
 
-// 23 Tabla de multiplicar
+// 23. Tabla de multiplicar
 function ejercicio_27() {
     n = parseInt(prompt("Ingrese un numero para q aparesca la tabla"))
     num = parseInt(prompt("ingrese el limite de su tabla "))
@@ -424,7 +423,7 @@ function ejercicio_27() {
     }
 }
 
-// 24  Calcular factorial 
+// 24. Calcular factorial 
 function CalcularFactorial(num) {
     let r = 1
     for (let i = 2; i < num; i++) {
@@ -438,7 +437,7 @@ function ejercicio_28() {
     CalcularFactorial(num)
 }
 
-// 25 leer si son pares
+// 25. leer si son pares
 function ejercicio_29() {
     let arreglo = []
     for (let i = 0; i <= 3; i++) {
@@ -454,7 +453,7 @@ function ejercicio_29() {
     }
 }
 
-// 26  Sumar dos grupos
+// 26. Sumar dos grupos
 function ejercicio_30() {
     const A = [2, 4, 6];
     const B = [1, 3, 5];
@@ -534,37 +533,37 @@ function ejercicio_33() {
     console.log(`Mayores de edad: ${cantidad_edades}`)
 }
 
-// 
+// 20. Buscar valor en un arreglo
 function ejercicio_34() {
 
 }
 
-// 
+// 21. Concatenar palabras de un arreglo
 function ejercicio_35() {
 
 }
 
-// 
+// 22. Cubo de elementos en arreglo
 function ejercicio_36() {
 
 }
 
-// 
+// 23. Tabla de multiplicar de elementos
 function ejercicio_37() {
 
 }
 
-// 
+// 24. Factorial de elementos en arreglo
 function ejercicio_38() {
 
 }
 
-// 
+// 25. Copiar pares a otro arreglo
 function ejercicio_39() {
 
 }
 
-// 
+// 26. Suma de dos arreglos
 function ejercicio_40() {
 
 }

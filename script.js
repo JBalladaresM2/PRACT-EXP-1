@@ -100,7 +100,6 @@ function palindroma(palabra) {
 }
 function ejercicio_7() {
     palindroma("radar");
-
 }
 
 // 8. Frase con mayor cantidad de caracteres
@@ -297,7 +296,6 @@ function ejercicio_17() {
     }
     for (let i = 0; i < palabras.length; i++) {
         palindroma(palabras[i]);
-
     }
 }
 
@@ -401,6 +399,21 @@ function ejercicio_23() {
     console.log(`Mayores de edad: ${cantidad_edades}`)
 }
 
+// 
+function ejercicio_24() {
+
+}
+
+// 
+function ejercicio_25() {
+
+}
+
+// 
+function ejercicio_26() {
+
+}
+
 // 23 Tabla de multiplicar
 function ejercicio_27() {
     n = parseInt(prompt("Ingrese un numero para q aparesca la tabla"))
@@ -442,16 +455,16 @@ function ejercicio_29() {
 }
 
 // 26  Sumar dos grupos
-function ejercicio_30(){
+function ejercicio_30() {
     const A = [2, 4, 6];
     const B = [1, 3, 5];
     const C = [];
 
     for (let i = 0; i < A.length; i++) {
-    C.push(A[i] + B[i]);
+        C.push(A[i] + B[i]);
     }
 
-    console.log(C); 
+    console.log(C);
 }
 
 //========================================================================
@@ -519,4 +532,39 @@ function ejercicio_33() {
     }
 
     console.log(`Mayores de edad: ${cantidad_edades}`)
+}
+
+// 
+function ejercicio_34() {
+
+}
+
+// 
+function ejercicio_35() {
+
+}
+
+// 
+function ejercicio_36() {
+
+}
+
+// 
+function ejercicio_37() {
+
+}
+
+// 
+function ejercicio_38() {
+
+}
+
+// 
+function ejercicio_39() {
+
+}
+
+// 
+function ejercicio_40() {
+
 }

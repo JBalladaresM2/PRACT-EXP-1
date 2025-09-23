@@ -414,13 +414,16 @@ function ejercicio_26() {
 }
 
 // 23. Tabla de multiplicar
+function multiplicar(n, num) {
+    for (let i = 1; i <= num; i++) {
+        console.log(`
+    ${n}*${i} =${i * n}  `)
+    }
+}
 function ejercicio_27() {
     n = parseInt(prompt("Ingrese un numero para q aparesca la tabla"))
     num = parseInt(prompt("ingrese el limite de su tabla "))
-    for (let i = 0; i <= n; i++) {
-        console.log(`Tabla de multiplicar de ${n}
-    ${i}*${n} =${i * n}  `)
-    }
+    multiplicar(n, num)
 }
 
 // 24. Calcular factorial 
@@ -460,7 +463,7 @@ function Sumar(A, B, C) {
         C.push(A[i] + B[i]);
 
     }
-      console.log(C);
+    console.log(C);
 }
 function ejercicio_30() {
     const A = [2, 4, 6];
@@ -554,8 +557,14 @@ function ejercicio_36() {
 
 // 23. Tabla de multiplicar de elementos
 function ejercicio_37() {
+const n1=parseInt(prompt("Ingrese el numero 1"),10)
+const n2=parseInt(prompt("Ingrese el segundo numero"),10)
+const limite=parseInt(prompt("Ingrese el limite"),10)
 
+multiplicar(n1,limite)
+multiplicar(n2,limite)
 }
+
 
 // 24. Factorial de elementos en arreglo
 function ejercicio_38() {

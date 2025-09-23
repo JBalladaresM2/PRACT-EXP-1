@@ -454,17 +454,21 @@ function ejercicio_29() {
 }
 
 // 26. Sumar dos grupos
+function Sumar(A, B, C) {
+
+    for (let i = 0; i < A.length; i++) {
+        C.push(A[i] + B[i]);
+
+    }
+      console.log(C);
+}
 function ejercicio_30() {
     const A = [2, 4, 6];
     const B = [1, 3, 5];
     const C = [];
-
-    for (let i = 0; i < A.length; i++) {
-        C.push(A[i] + B[i]);
-    }
-
-    console.log(C);
+    Sumar(A, B, C);
 }
+
 
 //========================================================================
 // -------- BLOQUE 4 --------

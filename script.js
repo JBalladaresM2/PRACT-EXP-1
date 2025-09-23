@@ -441,10 +441,10 @@ function ejercicio_28() {
 }
 
 // 25. leer si son pares
-function ejercicio_29() {
+function leerPares(cantidad) {
     let arreglo = []
     for (let i = 0; i <= 3; i++) {
-        const num = parseInt(prompt(`Ingresa el numero ${i + 1} de 4:`, 10));
+        const num = parseInt(prompt(`Ingresa el numero ${i + 1} de ${cantidad}:`, 10));
         arreglo.push(num)
     }
 
@@ -454,6 +454,9 @@ function ejercicio_29() {
 
         }
     }
+}
+function ejercicio_29(){
+    leerPares(4)
 }
 
 // 26. Sumar dos grupos
@@ -557,26 +560,40 @@ function ejercicio_36() {
 
 // 23. Tabla de multiplicar de elementos
 function ejercicio_37() {
-const n1=parseInt(prompt("Ingrese el numero 1"),10)
-const n2=parseInt(prompt("Ingrese el segundo numero"),10)
-const limite=parseInt(prompt("Ingrese el limite"),10)
-
-multiplicar(n1,limite)
-multiplicar(n2,limite)
-}
-
-
-// 24. Factorial de elementos en arreglo
-function ejercicio_38() {
+    let numeros = [];
+    for (let i = 0; i < 2; i++) {
+        let n = prompt(`Ingrese un numero ${i + 1}`)
+        numeros.push(n);
+    }
+    const limite = parseInt(prompt("Ingrese el limite"), 10)
+    for (let i = 0; i < numeros.length; i++) {
+        multiplicar(numeros[i], limite)
+    }
 
 }
 
-// 25. Copiar pares a otro arreglo
-function ejercicio_39() {
 
-}
+    // 24. Factorial de elementos en arreglo
+    function ejercicio_38() {
+        let numeros = [];
+        for (let i = 0; i < 2; i++) {
+            let n = prompt(`Ingrese un numero ${i + 1}`)
+            numeros.push(n);
+        }
+        for (let i = 0; i < numeros.length; i++) {
+            CalcularFactorial(numeros[i]);
 
-// 26. Suma de dos arreglos
-function ejercicio_40() {
 
-}
+        }
+
+    }
+
+    // 25. Copiar pares a otro arreglo
+    function ejercicio_39() {
+
+    }
+
+    // 26. Suma de dos arreglos
+    function ejercicio_40() {
+
+    }

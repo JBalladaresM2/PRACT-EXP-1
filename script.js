@@ -443,8 +443,8 @@ function ejercicio_28() {
 // 25. leer si son pares
 function leerPares(cantidad) {
     let arreglo = []
-    for (let i = 0; i <= 3; i++) {
-        const num = parseInt(prompt(`Ingresa el numero ${i + 1} de ${cantidad}:`, 10));
+    for (let i = 0; i < cantidad; i++) {
+        const num = parseInt(prompt(`Ingresa el numero ${i + 1} de ${cantidad}:`));
         arreglo.push(num)
     }
 
@@ -455,7 +455,7 @@ function leerPares(cantidad) {
         }
     }
 }
-function ejercicio_29(){
+function ejercicio_29() {
     leerPares(4)
 }
 
@@ -573,27 +573,40 @@ function ejercicio_37() {
 }
 
 
-    // 24. Factorial de elementos en arreglo
-    function ejercicio_38() {
-        let numeros = [];
-        for (let i = 0; i < 2; i++) {
-            let n = prompt(`Ingrese un numero ${i + 1}`)
-            numeros.push(n);
-        }
-        for (let i = 0; i < numeros.length; i++) {
-            CalcularFactorial(numeros[i]);
+// 24. Factorial de elementos en arreglo
+function ejercicio_38() {
+    let numeros = [];
+    for (let i = 0; i < 2; i++) {
+        let n = prompt(`Ingrese un numero ${i + 1}`)
+        numeros.push(n);
+    }
+    for (let i = 0; i < numeros.length; i++) {
+        CalcularFactorial(numeros[i]);
 
-
-        }
 
     }
 
-    // 25. Copiar pares a otro arreglo
-    function ejercicio_39() {
+}
 
+// 25. Copiar pares a otro arreglo
+function ejercicio_39() {
+    let pares = [];
+    let cantidad=parseInt(prompt("Ingrese la cantidad que va a ingresar"))
+    for (let i = 0; i < cantidad ; i++) {
+        let n = parseInt(prompt(`Ingrese un numero ${i + 1}`))
+        if(n%2===0){
+            pares.push(n);
+    }
+    }
+    console.log(`Numeros encontrados pares ${pares}`)
+    if(pares>0){
+        leerPares(pares.length)
     }
 
-    // 26. Suma de dos arreglos
-    function ejercicio_40() {
+}
 
-    }
+// 26. Suma de dos arreglos
+function ejercicio_40() {
+    
+
+}

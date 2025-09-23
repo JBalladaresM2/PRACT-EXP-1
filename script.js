@@ -591,15 +591,15 @@ function ejercicio_38() {
 // 25. Copiar pares a otro arreglo
 function ejercicio_39() {
     let pares = [];
-    let cantidad=parseInt(prompt("Ingrese la cantidad que va a ingresar"))
-    for (let i = 0; i < cantidad ; i++) {
+    let cantidad = parseInt(prompt("Ingrese la cantidad que va a ingresar"))
+    for (let i = 0; i < cantidad; i++) {
         let n = parseInt(prompt(`Ingrese un numero ${i + 1}`))
-        if(n%2===0){
+        if (n % 2 === 0) {
             pares.push(n);
-    }
+        }
     }
     console.log(`Numeros encontrados pares ${pares}`)
-    if(pares>0){
+    if (pares > 0) {
         leerPares(pares.length)
     }
 
@@ -607,6 +607,20 @@ function ejercicio_39() {
 
 // 26. Suma de dos arreglos
 function ejercicio_40() {
-    
+    const A = [];
+    const B = [];
+    let C = [];
 
+    let total = parseInt(prompt("Cuantos numeros va ingresar"))
+
+    for (let i = 0; i < total; i++) {
+        let num1 = parseInt(prompt(`Ingrese un numero ${i + 1}para el primer arreglo`))
+        A.push(num1);
+    }
+    for (let i = 0; i < total; i++) {
+        let num2 = parseInt(prompt(`Ingrese un numero ${i + 1} para el segundo arreglo `))
+        B.push(num2);
+    }
+
+    Sumar(A, B, C)
 }

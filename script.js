@@ -342,14 +342,14 @@ function ejercicio_20() {
 function CalcularPromedio(cantidad) {
     let suma = 0
     promedio = 0
+    console.log(`El promedio de los siguientes numeros :`)
    for (let i = 0; i < cantidad; i++) {
   num = parseInt(prompt(`Ingresa el numero`))
-   console.log(`El promedio de los siguientes numeros :`)
    console.log (`Numero # ${i+1} : ${num}`)
    suma+=num
 }
 promedio = suma / cantidad
-console.log (`Es : ${promedio}`)
+console.log (`PROMEDIO FINAL : ${promedio}`)
 
 }
 function ejercicio_21() {

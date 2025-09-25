@@ -161,7 +161,7 @@ function ejercicio_10() {    //le agregamos los valores o caracteres a la funcio
 // 1. Contar caracteres de varias palabras
 function ejercicio_11() {
     debugger
-palabras = []
+palabras = []                                           
 n = parseInt(prompt("Ingrese la cantidad de palabras"))
 for (j=0 ; j<n ; j++){
 palabra=prompt(`Ingrese la palabra ${n+1} :`)
@@ -265,48 +265,48 @@ function ejercicio_16() {
 }
 
 // 7. Polindromo en un arreglo 
-function ejercicio_17() {
+function ejercicio_17() {                   //le abrimos un let para guardar nuestro arreglo
     let palabra, palabras = []
-    while (true) {
+    while (true) {                      //abrimos un while para en cuando sea false se detenga el bucle 
         palabra = prompt("Ingrese una palabra para saber si es palindromo")
-        if (palabra !== "") {
+        if (palabra !== "") {               //abrimos una condicional q cuando palabra sea diferente de vacio se agrege al arreglo con el pus
             palabras.push(palabra)
         } else {
             break
         }
     }
-    for (let i = 0; i < palabras.length; i++) {
+    for (let i = 0; i < palabras.length; i++) { // le ponemos un for para las palabras vayan contadas y reciclamos el codigo n° 7
         palindroma(palabras[i]);
     }
 }
 
 // 8. Mayor numero de Caracteres
-function ejercicio_18() {
-    let bebes = [["me gusta el futbol", "prefiero el  baloncesto"], ["hola", "adios"]]
-    for (i = 0; i < bebes.length; i++) {
+function ejercicio_18() { //le ponemos los valores que ya estaban y solamente creamos un let ponemos la frases
+    let bebes = [["me gusta el futbol", "prefiero el  baloncesto"], ["hola", "adios"]] //ponemos un for para recorrer el arreglo y mandamos 
+    for (i = 0; i < bebes.length; i++) {        //los datos a la funcion n° 8 que ya tiene el procedimiento 
         caracteres(bebes[i][0], bebes[i][1]);
     }
 }
 
 // 9. N apariciones
 function ejercicio_19() {
-    const N = parseInt(prompt("¿Cuántas palabras ingresarás?"));
-    const letra = prompt("Letra a contar en todas:");
+    const N = parseInt(prompt("¿Cuántas palabras ingresarás?")); //ponemos dos prompt para pedir cuantas letras ingresara 
+    const letra = prompt("Letra a contar en todas:"); // y la letra a buscar
 
-    for (let i = 1; i <= N; i++) {
+    for (let i = 1; i <= N; i++) {      //ponemos un for para el limite de palabras 
         const palabra = prompt(`Palabra ${i}:`);
-        contarfrase(palabra, letra);
+        contarfrase(palabra, letra);            //mandamos los datas a ala funcion n°8 y asi reciclamos codigos 
     }
 }
 
 // 10. Seperar numeros 
 function ejercicio_20() {
-    let num = []
+    let num = []            //abrimos una variable para guardar los datos del arreglo
     let n;
 
     while (true) {
-        n = prompt("Ingrese una frase")
-        if (n === "" || n === null) {
+        n = prompt("Ingrese una frase")   //abrimos un while pidiendo la frase y una condicional si es n igual a vacio o a null 
+        if (n === "" || n === null) {     //se acaba el ciclo y mandamos los datos a el arreglo
             break;
         } else {
             num.push(n)

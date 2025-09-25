@@ -261,7 +261,6 @@ function ejercicio_15() {
 
 // 6. Reemplazo de caracteres en varios textos
 function ejercicio_16() {
-    debugger;
     let palabra, palabras = []
 
     while (true) {
@@ -283,7 +282,6 @@ function ejercicio_16() {
 
 // 7. Polindromo en un arreglo 
 function ejercicio_17() {
-    debugger
     let palabra, palabras = []
     while (true) {
         palabra = prompt("Ingrese una palabra para saber si es palindromo")
@@ -339,19 +337,19 @@ function ejercicio_20() {
 //========================================================================
 
 // 17. Calcular el promedio de 5 números
-function CalcularPromedio(suma , cantidad) {
-promedio = suma / cantidad
-console.log (`PROMEDIO FINAL : ${promedio}`)
+function CalcularPromedio(suma, cantidad) {
+    promedio = suma / cantidad
+    console.log(`PROMEDIO FINAL : ${promedio}`)
+}
 
-}
 function ejercicio_21() {
-const cantidad = 5
-suma = 0
-for (i=0 ; i< cantidad ; i++){
-num = parseInt(prompt(`Ingrese el numero # ${ i+1} : `))
-suma+=num
-}
-CalcularPromedio(suma , cantidad )
+    const cantidad = 5
+    suma = 0
+    for (i = 0; i < cantidad; i++) {
+        num = parseInt(prompt(`Ingrese el numero # ${i + 1} : `))
+        suma += num
+    }
+    CalcularPromedio(suma, cantidad)
 }
 
 // 18. Contar cuántos de 5 números son impares.
@@ -397,18 +395,55 @@ function ejercicio_23() {
 }
 
 // 20. Buscar un valor en 4 números.
-function ejercicio_24() {
+function BuscarValor(numero, valor) {
+    if (numero === valor) {
+        console.log(`Se encontro el numero ${valor}`)
+    }
+}
 
+function ejercicio_24() {
+    let numero, valor
+
+    valor = parseInt(prompt("Ingresa el valor a buscar"))
+
+    for (let i = 0; i < 4; i++) {
+        numero = parseInt(prompt("Ingresa numero:")) || 0
+        BuscarValor(numero, valor)
+    }
 }
 
 // 21. Concatenar 3 palabras.
-function ejercicio_25() {
+function ConcatenarPalabras(palabra, concatenadas) {
+    if (concatenadas === "") {
+        return palabra
+    } else {
+        return concatenadas + " " + palabra
+    }
+}
 
+function ejercicio_25() {
+    let palabra, concatenado = ""
+
+    for (let i = 0; i < 3; i++) {
+        palabra = prompt("Ingresa una palabra:") || ""
+        concatenado = ConcatenarPalabras(palabra, concatenado)
+    }
+
+    console.log(`Palabras concatenadas: "${concatenado}"`)
 }
 
 // 22. Calcular el cubo de 3 números.
-function ejercicio_26() {
+function CalcularCubo(numero) {
+    console.log(`${numero ** 3}`)
+}
 
+function ejercicio_26() {
+    let numero
+
+    for (let i = 0; i < 3; i++) {
+        numero = parseInt(prompt("Ingresa numero:")) || 0
+        CalcularCubo(numero)
+    }
 }
 
 // 23. Tabla de multiplicar
@@ -449,10 +484,10 @@ function leerPares(cantidad) {
     for (let i = 0; i < arreglo.length; i++) {
         if (arreglo[i] % 2 === 0) {
             console.log(`Par: ${arreglo[i]} y su posicion ${i}`)
-
         }
     }
 }
+
 function ejercicio_29() {
     leerPares(4)
 }
@@ -466,13 +501,13 @@ function Sumar(A, B, C) {
     }
     console.log(C);
 }
+
 function ejercicio_30() {
     const A = [2, 4, 6];
     const B = [1, 3, 5];
     const C = [];
     Sumar(A, B, C);
 }
-
 
 //========================================================================
 // -------- BLOQUE 4 --------
@@ -496,7 +531,7 @@ function ejercicio_31() {
         suma += numeros[i]
     }
 
-    CalcularPromedio(suma , cantidad)
+    CalcularPromedio(suma, cantidad)
 }
 
 // 18. Contar impares en un arreglo
@@ -543,17 +578,57 @@ function ejercicio_33() {
 
 // 20. Buscar valor en un arreglo
 function ejercicio_34() {
+    let numeros = [], numero, valor
 
+    valor = parseInt(prompt("Ingresa el valor a buscar"))
+
+    while (true) {
+        numero = parseInt(prompt("Ingresa un numero:")) || 0
+        if (numero === 0) {
+            break
+        }
+        numeros.push(numero)
+    }
+
+    for (let i = 0; i < numeros.length; i++) {
+        BuscarValor(numeros[i], valor)
+    }
 }
 
 // 21. Concatenar palabras de un arreglo
 function ejercicio_35() {
+    let palabras = [], palabra, concatenado = ""
 
+    while (true) {
+        palabra = prompt("Ingresa un numero:") || ""
+        if (palabra === "") {
+            break
+        }
+        palabras.push(palabra)
+    }
+
+    for (let i = 0; i < palabras.length; i++) {
+        concatenado = ConcatenarPalabras(palabras[i], concatenado)
+    }
+
+    console.log(`Palabras concatenadas: "${concatenado}"`)
 }
 
 // 22. Cubo de elementos en arreglo
 function ejercicio_36() {
+    let numeros = [], numero
 
+    while (true) {
+        numero = parseInt(prompt("Ingresa un numero:")) || 0
+        if (numero === 0) {
+            break
+        }
+        numeros.push(numero)
+    }
+
+    for (let i = 0; i < numeros.length; i++) {
+        CalcularCubo(numeros[i])
+    }
 }
 
 // 23. Tabla de multiplicar de elementos
@@ -567,7 +642,6 @@ function ejercicio_37() {
     for (let i = 0; i < numeros.length; i++) {
         multiplicar(numeros[i], limite)
     }
-
 }
 
 
@@ -580,10 +654,7 @@ function ejercicio_38() {
     }
     for (let i = 0; i < numeros.length; i++) {
         CalcularFactorial(numeros[i]);
-
-
     }
-
 }
 
 // 25. Copiar pares a otro arreglo
@@ -600,7 +671,6 @@ function ejercicio_39() {
     if (pares > 0) {
         leerPares(pares.length)
     }
-
 }
 
 // 26. Suma de dos arreglos

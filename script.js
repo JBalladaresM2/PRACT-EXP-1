@@ -325,40 +325,40 @@ function ejercicio_20() {
 //========================================================================
 
 // 17. Calcular el promedio de 5 números
-function CalcularPromedio(suma, cantidad) {
-    promedio = suma / cantidad
-    console.log(`PROMEDIO FINAL : ${promedio}`)
+function CalcularPromedio(suma, cantidad) { //PROCESO
+    promedio = suma / cantidad //se calcula el promedio
+    console.log(`PROMEDIO FINAL : ${promedio}`) //SALIDA : se muestra el promedio
 }
 
-function ejercicio_21() {
-    const cantidad = 5
+function ejercicio_21() { //ENTRADA
+    const cantidad = 5 // Variable con la cantidad a dividir
     suma = 0
-    for (i = 0; i < cantidad; i++) {
-        num = parseInt(prompt(`Ingrese el numero # ${i + 1} : `))
-        suma += num
+    for (i = 0; i < cantidad; i++) { //arreglo para preguntar por cada numero
+        num = parseInt(prompt(`Ingrese el numero # ${i + 1} : `)) //se inserta el numero
+        suma += num //se suma los numeros
     }
-    CalcularPromedio(suma, cantidad)
+    CalcularPromedio(suma, cantidad) //se llama a la funcion con los arreglos
 }
 
 // 18. Contar cuántos de 5 números son impares.
-function Impares(numero) {
-    if (numero % 2 != 0) {
-        return true
+function Impares(numero) { //PROCESO
+    if (numero % 2 != 0) { //se calcula si el numero es impar
+        return true       //retorna la respuesta
     }
 }
 
-function ejercicio_22() {
-    let numero, cantidad_impares = 0
-    const cantidad = 5
+function ejercicio_22() { //ENTRADA
+    let numero, cantidad_impares = 0 //se asigna las variables
+    const cantidad = 5 // variable con la cantidad
 
-    for (let i = 0; i < cantidad; i++) {
-        numero = parseInt(prompt("Ingresa un numero:")) || 0
-        if (Impares(numero) === true) {
-            cantidad_impares++
+    for (let i = 0; i < cantidad; i++) { //ciclo que preguntara por cada numero
+        numero = parseInt(prompt("Ingresa un numero:")) || 0 //se pregunta por el numero
+        if (Impares(numero) === true) { //llamamos la funcion y se compara si el resultado es correcto
+            cantidad_impares++ //contador de impares
         }
     }
-
-    console.log(`Cantidad de impares: ${cantidad_impares}`)
+//SALIDA
+    console.log(`Cantidad de impares: ${cantidad_impares}`) //se muestra la cantidad de impares
 }
 
 // 19. Leer 5 edades y contar cuántos son mayores de edad.
@@ -369,17 +369,17 @@ function MayorDeEdad(edad) {
 }
 
 function ejercicio_23() {
-    let edad, cantidad_edades = 0
-    const cantidad = 5
+    let edad, cantidad_edades = 0 //variable de edad y cantidad de mayores de edad
+    const cantidad = 5 //variable para solo preguntar 5 edades
 
-    for (let i = 0; i < cantidad; i++) {
-        edad = parseInt(prompt("Ingresa una edad:")) || 0
-        if (MayorDeEdad(edad) === true) {
-            cantidad_edades++
+    for (let i = 0; i < cantidad; i++) { //ciclo que pregunta por las edad
+        edad = parseInt(prompt("Ingresa una edad:")) || 0 //se inserta la edad //PROCESO
+        if (MayorDeEdad(edad) === true) { //se llama a la funciono y compara si el resultado es correcto
+            cantidad_edades++ //contador de edades mayores
         }
     }
-
-    console.log(`Mayores de edad: ${cantidad_edades}`)
+//SALIDA
+    console.log(`Mayores de edad: ${cantidad_edades}`) //muestra las edades
 }
 
 // 20. Buscar un valor en 4 números.
@@ -501,66 +501,66 @@ function ejercicio_30() {
 //========================================================================
 
 // 17. Promedio de un arreglo
-function ejercicio_31() {
-    let numero, numeros = [], suma = 0
+function ejercicio_31() { //ENTRADA
+    let numero, numeros = [], suma = 0 // se asignan las variables
 
     while (true) {
-        numero = parseInt(prompt("Ingresa un numero:")) || 0
+        numero = parseInt(prompt("Ingresa un numero:")) || 0 //s pregunta por el numero
         if (numero === 0) {
             break
         }
-        numeros.push(numero)
+        numeros.push(numero) //se ingresa el numero en el arreglo
     }
 
-    const cantidad = numeros.length
+    const cantidad = numeros.length 
 
-    for (let i = 0; i < cantidad; i++) {
+    for (let i = 0; i < cantidad; i++) { //ciclo que sumara los numeros de cada arreglo
         suma += numeros[i]
     }
 
-    CalcularPromedio(suma, cantidad)
+    CalcularPromedio(suma, cantidad) //funcion con el proceso del ejercicio 21
 }
 
 // 18. Contar impares en un arreglo
-function ejercicio_32() {
-    let numero, numeros = [], cantidad_impares = 0
+function ejercicio_32() { //ENTRADA
+    let numero, numeros = [], cantidad_impares = 0 //se asignan valores
 
     while (true) {
-        numero = parseInt(prompt("Ingresa un numero:")) || 0
-        if (numero === 0) {
+        numero = parseInt(prompt("Ingresa un numero:")) || 0 //se ingresa un numero
+        if (numero === 0) { 
             break
         }
-        numeros.push(numero)
+        numeros.push(numero) //entra el numero en el arreglo
     }
 
-    for (let i = 0; i < numeros.length; i++) {
-        if (Impares(numeros[i]) === true) {
-            cantidad_impares++
+    for (let i = 0; i < numeros.length; i++) { //funcion que preguntara por cada numero
+        if (Impares(numeros[i]) === true) { //funcion con el proceso (se preguntara si el resultado es correcto)
+            cantidad_impares++ //contador de impares
         }
     }
 
-    console.log(`Cantidad de impares: ${cantidad_impares}`)
+    console.log(`Cantidad de impares: ${cantidad_impares}`) //Muestra los impares
 }
 
 // 19. Mayores de edad en un arreglo
-function ejercicio_33() {
-    let edad, edades = [], cantidad_edades = 0
+function ejercicio_33() { //entrada
+    let edad, edades = [], cantidad_edades = 0 //se asignan las variables
 
     while (true) {
-        edad = parseInt(prompt("Ingresa una edad:")) || 0
+        edad = parseInt(prompt("Ingresa una edad:")) || 0 //se pregunta por la edad
         if (edad === 0) {
             break
         }
-        edades.push(edad)
+        edades.push(edad) //la edad entra en el arreglo
     }
 
-    for (let i = 0; i < edades.length; i++) {
-        if (MayorDeEdad(edades[i]) === true) {
-            cantidad_edades++
+    for (let i = 0; i < edades.length; i++) { //ciclo que recorrera por cada edad
+        if (MayorDeEdad(edades[i]) === true) { //verifica si es mayor de edad con la funcion del ejercicio 23
+            cantidad_edades++ //contador de mayor de edad
         }
     }
 
-    console.log(`Mayores de edad: ${cantidad_edades}`)
+    console.log(`Mayores de edad: ${cantidad_edades}`) //muestra el resultado 
 }
 
 // 20. Buscar valor en un arreglo

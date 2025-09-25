@@ -161,16 +161,16 @@ function ejercicio_10() {    //le agregamos los valores o caracteres a la funcio
 //========================================================================
 
 // 1. Contar caracteres de varias palabras
-function ejercicio_11() {
-    debugger
-    palabras = []
-    n = parseInt(prompt("Ingrese la cantidad de palabras"))
-    for (j = 0; j < n; j++) {
-        palabra = prompt(`Ingrese la palabra ${n + 1} :`)
-        palabras.push(palabra)
+function ejercicio_11() { //ENTRADA
+    debugger 
+    palabras = [] //se genera el arreglo
+    n = parseInt(prompt("Ingrese la cantidad de palabras")) //se pregunta por la cantidad de palabras
+    for (j = 0; j < n; j++) { //ciclo para preguntar las palabras
+        palabra = prompt(`Ingrese la palabra ${n + 1} :`) //se pregunta por la palabra
+        palabras.push(palabra) //entra la palaba por el arreglo
     }
-    for (i = 0; i < palabras.length; i++) {
-        contarcaracteres(palabras[i])
+    for (i = 0; i < palabras.length; i++) { //ciclo que hare el proceso
+        contarcaracteres(palabras[i]) //Funcion del ejercicio uno pero ahora funciona con el arreglo 
     }
 
 }
@@ -179,30 +179,30 @@ function ejercicio_11() {
 // 2. Contar apariciones de una letra en varias frases
 function ejercicio_12() {
     debugger
-    serieFrases = []
-    n = parseInt(prompt("Ingrese la cantidad de frases"))
-    for (j = 0; j < n; j++) {
-        frases = prompt(`Ingrese la Frase ${j + 1} :`)
-        serieFrases.push(frases)
+    serieFrases = [] //aca se genera un arreglo con las frases
+    n = parseInt(prompt("Ingrese la cantidad de frases")) //se pregunta por las frases
+    for (j = 0; j < n; j++) { //ciclo
+        frases = prompt(`Ingrese la Frase ${j + 1} :`)//se pregunta por cada frase
+        serieFrases.push(frases) //entra la frase en el arreglo
     }
-    caracter = prompt("Ingrese el caracter")
-    for (m = 0; m < serieFrases.length; m++) {
-        contarApariciones(serieFrases[m], caracter)
+    caracter = prompt("Ingrese el caracter") //se pregunta por el caracter 
+    for (m = 0; m < serieFrases.length; m++) { //ciclo
+        contarApariciones(serieFrases[m], caracter) // funcion del ejercicio 2
     }
 }
 
 
 // 3. Invertir varios textos
-function ejercicio_13() {
+function ejercicio_13() { //ENTRADA
     debugger
-    textos = []
-    n = prompt("Ingrese la cantidad de textos a invertir")
-    for (c = 0; c < n; c++) {
-        palabra = prompt(`Ingrese la palabra ${c + 1} :`)
-        textos.push(palabra)
+    textos = [] // arreglo con los textos
+    n = prompt("Ingrese la cantidad de textos a invertir") //se pregunta por la cantidad de texto
+    for (c = 0; c < n; c++) { //ciclo que preguntara la palabras
+        palabra = prompt(`Ingrese la palabra ${c + 1} :`) //se inserta la palabra por el usuario
+        textos.push(palabra) //la palabra entra en el arreglo
     }
-    for (j = 0; j < textos.length; j++) {
-        invertir(textos[j])
+    for (j = 0; j < textos.length; j++) { //ciclo que hare que funcione el ejercicio
+        invertir(textos[j]) //funcion del ejercicio 3 
     }
 }
 

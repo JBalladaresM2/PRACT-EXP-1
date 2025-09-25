@@ -617,42 +617,42 @@ function ejercicio_36() {
 }
 
 // 23. Tabla de multiplicar de elementos
-function ejercicio_37() {
+function ejercicio_37() {           //le ponemos un for porque solo quiero que reciba dos numeros 
     let numeros = [];
     for (let i = 0; i < 2; i++) {
-        let n = prompt(`Ingrese un numero ${i + 1}`)
+        let n = prompt(`Ingrese un numero ${i + 1}`) // esos dos numeros los mandamos con push
         numeros.push(n);
     }
-    const limite = parseInt(prompt("Ingrese el limite"), 10)
+    const limite = parseInt(prompt("Ingrese el limite"), 10)    //le pedimos el limite de la tabla
     for (let i = 0; i < numeros.length; i++) {
-        multiplicar(numeros[i], limite)
+        multiplicar(numeros[i], limite) // recorremos el codigo con un nuevo for y mandamos los datos a la funcion n°27
     }
 }
 
 
 // 24. Factorial de elementos en arreglo
 function ejercicio_38() {
-    let numeros = [];
+    let numeros = [];               //abrimos otro let para el arreglo
     for (let i = 0; i < 2; i++) {
-        let n = prompt(`Ingrese un numero ${i + 1}`)
+        let n = prompt(`Ingrese un numero ${i + 1}`)  //le ponemos un for xq solo quiero que sean dos numeros que calcule
         numeros.push(n);
     }
-    for (let i = 0; i < numeros.length; i++) {
+    for (let i = 0; i < numeros.length; i++) { //recorremos el arreglo y mandamos los datos a la funcion N° 28 que ya tiene el procedimiento
         CalcularFactorial(numeros[i]);
     }
 }
 
 // 25. Copiar pares a otro arreglo
-function ejercicio_39() {
+function ejercicio_39() {                       //similar al anterior abrimos un let para guardar el areglo
     let pares = [];
-    let cantidad = parseInt(prompt("Ingrese la cantidad que va a ingresar"))
+    let cantidad = parseInt(prompt("Ingrese la cantidad que va a ingresar"))    //pedimos al usuario un limite de numeros 
     for (let i = 0; i < cantidad; i++) {
-        let n = parseInt(prompt(`Ingrese un numero ${i + 1}`))
-        if (n % 2 === 0) {
-            pares.push(n);
+        let n = parseInt(prompt(`Ingrese un numero ${i + 1}`)) //creamos un for para respetar ese limite 
+        if (n % 2 === 0) {                                      //abrimos una condicional que si n es igual a 0 lo pone en el push 
+            pares.push(n);                                   // sino lo ignora 
         }
     }
-    console.log(`Numeros encontrados pares ${pares}`)
+    console.log(`Numeros encontrados pares ${pares}`) // le ponemos una condicoanl que si pares es mayor a 0 meta los datos a la funcion n°29
     if (pares > 0) {
         leerPares(pares.length)
     }
@@ -661,19 +661,19 @@ function ejercicio_39() {
 // 26. Suma de dos arreglos
 function ejercicio_40() {
     const A = [];
-    const B = [];
+    const B = [];               //creamos 3 const 2 para guaradr nuestros arreglos y el otro para el resultado
     let C = [];
 
-    let total = parseInt(prompt("Cuantos numeros va ingresar"))
+    let total = parseInt(prompt("Cuantos numeros va ingresar"))  //ponemos el limite de numeros quq queramos
 
     for (let i = 0; i < total; i++) {
-        let num1 = parseInt(prompt(`Ingrese un numero ${i + 1}para el primer arreglo`))
+        let num1 = parseInt(prompt(`Ingrese un numero ${i + 1}para el primer arreglo`)) //abrimos un for por cada arreglo para el A y para el B
         A.push(num1);
     }
     for (let i = 0; i < total; i++) {
-        let num2 = parseInt(prompt(`Ingrese un numero ${i + 1} para el segundo arreglo `))
+        let num2 = parseInt(prompt(`Ingrese un numero ${i + 1} para el segundo arreglo `)) //E s lo mismo solo cambia el A por el B
         B.push(num2);
     }
 
-    Sumar(A, B, C)
+    Sumar(A, B, C)  //mandamos los datos a la funcion N°30 1ue ya tiene el proceso
 }

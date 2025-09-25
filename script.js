@@ -339,21 +339,19 @@ function ejercicio_20() {
 //========================================================================
 
 // 17. Calcular el promedio de 5 números
-function CalcularPromedio(cantidad) {
-    let suma = 0
-    promedio = 0
-    console.log(`El promedio de los siguientes numeros :`)
-   for (let i = 0; i < cantidad; i++) {
-  num = parseInt(prompt(`Ingresa el numero`))
-   console.log (`Numero # ${i+1} : ${num}`)
-   suma+=num
-}
+function CalcularPromedio(suma , cantidad) {
 promedio = suma / cantidad
 console.log (`PROMEDIO FINAL : ${promedio}`)
 
 }
 function ejercicio_21() {
-CalcularPromedio(5)
+const cantidad = 5
+suma = 0
+for (i=0 ; i< cantidad ; i++){
+num = parseInt(prompt(`Ingrese el numero # ${ i+1} : `))
+suma+=num
+}
+CalcularPromedio(suma , cantidad )
 }
 
 // 18. Contar cuántos de 5 números son impares.
@@ -498,7 +496,7 @@ function ejercicio_31() {
         suma += numeros[i]
     }
 
-    CalcularPromedio(suma, cantidad)
+    CalcularPromedio(suma , cantidad)
 }
 
 // 18. Contar impares en un arreglo

@@ -3,43 +3,43 @@
 //========================================================================
 
 // 1. Contar caracteres de una palabra
-function contarcaracteres(palabra){
-  console.log (`La palabra : ${palabra} , tiene ${palabra.length} caracteres`)
+function contarcaracteres(palabra) {
+    console.log(`La palabra : ${palabra} , tiene ${palabra.length} caracteres`)
 }
 function ejercicio_1() {
-   palabra=prompt('Ingrese una palabra')
-   contarcaracteres(palabra)
+    palabra = prompt('Ingrese una palabra')
+    contarcaracteres(palabra)
 }
 // 2. Contar apariciones de una letra específica
-function contarApariciones(frase , caracter){
-let c=0
-for (i=0 ; i<frase.length ; i++){
-    if (frase[i] == caracter) {
-c++
+function contarApariciones(frase, caracter) {
+    let c = 0
+    for (i = 0; i < frase.length; i++) {
+        if (frase[i] == caracter) {
+            c++
+        }
     }
-}
-console.log(`la letra ${caracter} en la frase ${frase} se repite ${c} veces`)
+    console.log(`la letra ${caracter} en la frase ${frase} se repite ${c} veces`)
 }
 function ejercicio_2() {
-frase = prompt("Ingrese la frase")
-caracter = prompt("Ingrese el caracter que desea ver que se repite")
-contarApariciones(frase , caracter)
-        }
+    frase = prompt("Ingrese la frase")
+    caracter = prompt("Ingrese el caracter que desea ver que se repite")
+    contarApariciones(frase, caracter)
+}
 
 
 
 // 3. Invertir un texto
-function invertir(texto){
-let texto_invertido = ""
+function invertir(texto) {
+    let texto_invertido = ""
     for (let i = texto.length - 1; i >= 0; i--) {
         texto_invertido += texto[i]
     }
     console.log(`${texto_invertido}`)
 }
 function ejercicio_3() {
-texto = prompt("Ingrese el texto")
-invertir(texto)
-    
+    texto = prompt("Ingrese el texto")
+    invertir(texto)
+
 }
 
 
@@ -161,45 +161,47 @@ function ejercicio_10() {    //le agregamos los valores o caracteres a la funcio
 // 1. Contar caracteres de varias palabras
 function ejercicio_11() {
     debugger
-palabras = []                                           
-n = parseInt(prompt("Ingrese la cantidad de palabras"))
-for (j=0 ; j<n ; j++){
-palabra=prompt(`Ingrese la palabra ${n+1} :`)
-palabras.push(palabra)}
-for (i=0 ; i < palabras.length ; i++){
-contarcaracteres(palabras[i])
-}
-
+    palabras = []
+    n = parseInt(prompt("Ingrese la cantidad de palabras"))
+    for (j = 0; j < n; j++) {
+        palabra = prompt(`Ingrese la palabra ${n + 1} :`)
+        palabras.push(palabra)
     }
+    for (i = 0; i < palabras.length; i++) {
+        contarcaracteres(palabras[i])
+    }
+
+}
 
 
 // 2. Contar apariciones de una letra en varias frases
 function ejercicio_12() {
     debugger
     serieFrases = []
-n = parseInt(prompt("Ingrese la cantidad de frases"))
-for (j=0 ; j<n ; j++){
-frases=prompt(`Ingrese la Frase ${j+1} :`)
-serieFrases.push(frases)}
-caracter= prompt("Ingrese el caracter")
-for (m=0 ; m < serieFrases.length ; m++){
-contarApariciones(serieFrases[m] , caracter)
-}
+    n = parseInt(prompt("Ingrese la cantidad de frases"))
+    for (j = 0; j < n; j++) {
+        frases = prompt(`Ingrese la Frase ${j + 1} :`)
+        serieFrases.push(frases)
+    }
+    caracter = prompt("Ingrese el caracter")
+    for (m = 0; m < serieFrases.length; m++) {
+        contarApariciones(serieFrases[m], caracter)
+    }
 }
 
 
 // 3. Invertir varios textos
 function ejercicio_13() {
     debugger
-textos=[]
-n= prompt("Ingrese la cantidad de textos a invertir")
-for (c=0 ; c<n ; c++){
- palabra=prompt(`Ingrese la palabra ${c+1} :`)
- textos.push(palabra)
-}
-for (j=0 ; j < textos.length ; j++){
-    invertir(textos[j])
-}
+    textos = []
+    n = prompt("Ingrese la cantidad de textos a invertir")
+    for (c = 0; c < n; c++) {
+        palabra = prompt(`Ingrese la palabra ${c + 1} :`)
+        textos.push(palabra)
+    }
+    for (j = 0; j < textos.length; j++) {
+        invertir(textos[j])
+    }
 }
 
 
@@ -431,55 +433,54 @@ function ejercicio_26() {
 }
 
 // 23. Tabla de multiplicar
-function multiplicar(n, num) {
+function multiplicar(n, num) {      // este codigo vamos a reciclar asi que lo estruturamos asi
     for (let i = 1; i <= num; i++) {
-        console.log(`
-    ${n}*${i} =${i * n}  `)
+        console.log(` ${n}*${i} =${i * n}  `)  //abrimos un for para recorres la i y el numero que nos da el usuario
     }
 }
 function ejercicio_27() {
-    n = parseInt(prompt("Ingrese un numero para q aparesca la tabla"))
-    num = parseInt(prompt("ingrese el limite de su tabla "))
+    n = parseInt(prompt("Ingrese un numero para q aparesca la tabla"))  //pedimos los datos al usuario
+    num = parseInt(prompt("ingrese el limite de su tabla "))        // y el limite de la tabla
     multiplicar(n, num)
 }
 
 // 24. Calcular factorial 
 function CalcularFactorial(num) {
-    let r = 1
+    let r = 1                                           //ponemos el r=1 poque siempre empieza con 1 porque 0 es igual a nada
     for (let i = 2; i <= num; i++) {
-        r *= i;
+        r *= i;                                 //a r le multimplicamos la i que esta recorriendo el ciclo
     }
-    console.log(`Tu numero ${num}! =${r}`)
+    console.log(`Tu numero ${num}! =${r}`)      //te imprime el codigo
 }
 
 function ejercicio_28() {
-    let num = parseInt(prompt("Ingrese el numero que quiere comprobar"))
+    let num = parseInt(prompt("Ingrese el numero que quiere comprobar"))        //enviamos los datos a la funcion 
     CalcularFactorial(num)
 }
 
 // 25. leer si son pares
-function leerPares(cantidad) {
-    let arreglo = []
+function leerPares(cantidad) {          // abrimos un let para guardar el arreglo
+    let arreglo = []                    //abrimos el for para que no sea mayor a cantidad 
     for (let i = 0; i < cantidad; i++) {
         const num = parseInt(prompt(`Ingresa el numero ${i + 1} de ${cantidad}:`));
-        arreglo.push(num)
+        arreglo.push(num)           //abrimos un prompt para pedir numeros y que envia al arreglo
     }
 
-    for (let i = 0; i < arreglo.length; i++) {
-        if (arreglo[i] % 2 === 0) {
+    for (let i = 0; i < arreglo.length; i++) { //abrimos otro for para recorrer el arreglo
+        if (arreglo[i] % 2 === 0) {     //abrimos una condicional para si el arreglo es igual a 2 es par y que muestre
             console.log(`Par: ${arreglo[i]} y su posicion ${i}`)
         }
     }
 }
 
 function ejercicio_29() {
-    leerPares(4)
+    leerPares(4)    //ponemos la cantidad y enviamos los datos
 }
 
 // 26. Sumar dos grupos
-function Sumar(A, B, C) {
-
-    for (let i = 0; i < A.length; i++) {
+function Sumar(A, B, C) {   //abrimos un for para recorrer
+    
+    for (let i = 0; i < A.length; i++) { //le ponemos a la A el length y le enviamos a C con un psush sumando en el proceso
         C.push(A[i] + B[i]);
 
     }
@@ -488,7 +489,7 @@ function Sumar(A, B, C) {
 
 function ejercicio_30() {
     const A = [2, 4, 6];
-    const B = [1, 3, 5];
+    const B = [1, 3, 5];    //le ponemos los datos y enviamos
     const C = [];
     Sumar(A, B, C);
 }

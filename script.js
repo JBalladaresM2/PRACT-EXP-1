@@ -92,14 +92,14 @@ function ejercicio_6() {
 }
 
 // 7. Palabra palíndroma
-function palindroma(palabra) {
-    let palabra_invertida = ""
+function palindroma(palabra) { //llamaos a la funcion polindroma
+    let palabra_invertida = ""              //ponemos un let porque la variable va acambiar
 
-    for (let i = palabra.length - 1; i >= 0; i--) {
+    for (let i = palabra.length - 1; i >= 0; i--) { //Abrimos un for pata recorrer la palabra por un arreglo
         palabra_invertida += palabra[i]
     }
 
-    if (palabra === palabra_invertida) {
+    if (palabra === palabra_invertida) {            //abrimos una condiconal si es verdadero que anote si la palabra es invertida
         console.log(`La palabra "${palabra}" es palindroma`)
     } else {
         console.log(`Tu palabra "${palabra}" no es palindroma`)
@@ -107,50 +107,50 @@ function palindroma(palabra) {
 
 }
 
-function ejercicio_7() {
+function ejercicio_7() {    //Le ponemos valor a la funcion 
     palindroma("radar");
 }
 
 // 8. Frase con mayor cantidad de caracteres
-function caracteres(a, b) {
+function caracteres(a, b) {    //llamamos a la funcion
 
-    if (a.length < b.length) {
+    if (a.length < b.length) {  //abrimos una condiconal y le pones length para ver cuantas caracteres tiene la palabra para imprimirla
         console.log(`"${a} " tiene mas caracteres que ${b} `)
     } else {
         console.log(`"${b}" tiene mas caracteres que ${a} `)
     }
 }
 function ejercicio_8() {
-    caracteres("Me gusta el futbol", "Prefiero el baloncesto");
+    caracteres("Me gusta el futbol", "Prefiero el baloncesto");//llamamos a la funcion 
 }
 
 // 9. Contar apariciones de un carácter elegido
 
-function contarfrase(frase, letra) {
+function contarfrase(frase, letra) { //llamamos a la funcion 
     let veces = 0;
-    for (let i = 0; i < frase.length; i++) {
+    for (let i = 0; i < frase.length; i++) {     //abrimos una for para recorrer la frase y encontrar la letra 
         if (frase[i] === letra)
             veces++;
     }
-    console.log(`La letra "${letra}" se repite ${veces} veces en la frase "${frase}"`);
+    console.log(`La letra "${letra}" se repite ${veces} veces en la frase "${frase}"`);//imprimimos
 }
 
 function ejercicio_9() {
     let frase = prompt("Escribe una frase:");
-    let letra = prompt("Ingresa un caracter:");
+    let letra = prompt("Ingresa un caracter:");     //le ponemos los caracteres de la funcion
     contarfrase(frase, letra);
 }
 
 // 10. Dividir oración en palabras
 function dividir(frase) {
 
-    const segmentos = frase.split(" ")
+    const segmentos = frase.split(" ")   // abrimos una constante y le pones un split para que salga linea por linea 
 
-    for (let i = 0; i < segmentos.length; i++) {
+    for (let i = 0; i < segmentos.length; i++) { //el for para recorrer el codigo 
         console.log(`${segmentos[i]}`)
     }
 }
-function ejercicio_10() {
+function ejercicio_10() {    //le agregamos los valores o caracteres a la funcion 
     dividir("me gusta programar")
 }
 

@@ -3,37 +3,45 @@
 //========================================================================
 
 // 1. Contar caracteres de una palabra
+function contarcaracteres(palabra){
+  console.log (`La palabra : ${palabra} , tiene ${palabra.length} caracteres`)
+}
 function ejercicio_1() {
-    const palabra = "Ingenieria"
-    console.log(`La palabra "${palabra}" tiene ${palabra.length} letras`)
+   palabra=prompt('Ingrese una palabra')
+   contarcaracteres(palabra)
 }
-
 // 2. Contar apariciones de una letra específica
-function ejercicio_2() {
-    const frase = "Ingenieria en Software"
-    const letra = "e"
-    let veces = 0
-
-    for (let i = 0; i < frase.length; i++) {
-        if (frase[i] === letra) {
-            veces++
-        }
+function contarApariciones(frase , caracter){
+let c=0
+for (i=0 ; i<frase.length ; i++){
+    if (frase[i] == caracter) {
+c++
     }
-
-    console.log(`La letra "${letra}" se repite ${veces} veces en la frase "${frase}"`)
 }
+console.log(`la letra ${caracter} en la frase ${frase} se repite ${c} veces`)
+}
+function ejercicio_2() {
+frase = prompt("Ingrese la frase")
+caracter = prompt("Ingrese el caracter que desea ver que se repite")
+contarApariciones(frase , caracter)
+        }
+
+
 
 // 3. Invertir un texto
-function ejercicio_3() {
-    const texto = "Hola Mundo!"
-    let texto_invertido = ""
-
+function invertir(texto){
+let texto_invertido = ""
     for (let i = texto.length - 1; i >= 0; i--) {
         texto_invertido += texto[i]
     }
-
     console.log(`${texto_invertido}`)
 }
+function ejercicio_3() {
+texto = prompt("Ingrese el texto")
+invertir(texto)
+    
+}
+
 
 // 4. Comparar longitudes de cadenas
 function CompararLongitudes(cadena_1, cadena_2) {
@@ -152,72 +160,48 @@ function ejercicio_10() {
 
 // 1. Contar caracteres de varias palabras
 function ejercicio_11() {
-    let fruta, frutas = []
-
-    while (true) {
-        fruta = prompt("Ingresa un fruta:") // dejar vacio para dejar de agregar
-        if (fruta != "") {
-            frutas.push(fruta)
-        } else {
-            break
-        }
-    }
-
-    for (let i = 0; i < frutas.length; i++) {
-        console.log(`"${frutas[i]}" tiene ${frutas[i].length} letras.`)
-    }
+    debugger
+palabras = []
+n = parseInt(prompt("Ingrese la cantidad de palabras"))
+for (j=0 ; j<n ; j++){
+palabra=prompt(`Ingrese la palabra ${n+1} :`)
+palabras.push(palabra)}
+for (i=0 ; i < palabras.length ; i++){
+contarcaracteres(palabras[i])
 }
+
+    }
+
 
 // 2. Contar apariciones de una letra en varias frases
 function ejercicio_12() {
-    let frase, frases = [], veces = 0
-
-    while (true) {
-        frase = prompt("Ingresa una frase:") // dejar vacio para dejar de agregar
-        if (frase != "") {
-            frases.push(frase)
-        } else {
-            break
-        }
-    }
-
-    const letra = prompt("Ingresa un caracter:")
-
-
-    for (let i = 0; i < frases.length; i++) {
-        for (let j = 0; j < frases[i].length; j++) {
-            if (frases[i][j] === letra) {
-                veces++
-            }
-        }
-        console.log(`La letra "${letra}" se repite ${veces} veces en la frase #${i + 1} "${frases[i]}".`)
-        veces = 0
-    }
+    debugger
+    serieFrases = []
+n = parseInt(prompt("Ingrese la cantidad de frases"))
+for (j=0 ; j<n ; j++){
+frases=prompt(`Ingrese la Frase ${j+1} :`)
+serieFrases.push(frases)}
+caracter= prompt("Ingrese el caracter")
+for (m=0 ; m < serieFrases.length ; m++){
+contarApariciones(serieFrases[m] , caracter)
 }
+}
+
 
 // 3. Invertir varios textos
 function ejercicio_13() {
-    let texto, textos = [], texto_invertido
-
-    while (true) {
-        texto = prompt("Ingresa un texto:") // dejar vacio para dejar de agregar
-        if (texto != "") {
-            textos.push(texto)
-        } else {
-            break
-        }
-    }
-
-    for (let i = 0; i < textos.length; i++) {
-        texto_invertido = ""
-
-        for (let j = textos[i].length - 1; j >= 0; j--) {
-            texto_invertido += textos[i][j]
-        }
-
-        console.log(`${textos[i]} -> ${texto_invertido}`)
-    }
+    debugger
+textos=[]
+n= prompt("Ingrese la cantidad de textos a invertir")
+for (c=0 ; c<n ; c++){
+ palabra=prompt(`Ingrese la palabra ${c+1} :`)
+ textos.push(palabra)
 }
+for (j=0 ; j < textos.length ; j++){
+    invertir(textos[j])
+}
+}
+
 
 // 4. Comparar longitudes de pares de palabras en arreglo
 function ejercicio_14() {

@@ -2,45 +2,47 @@
 // -------- BLOQUE 1 --------
 //========================================================================
 
-// 1. Contar caracteres de una palabra
-function contarcaracteres(palabra) {
-    console.log(`La palabra : ${palabra} , tiene ${palabra.length} caracteres`)
+// 1. Contar caracteres de una palabra 
+function contarcaracteres(palabra) { //aqui empieza la funcion (PROCESO)
+    console.log(`La palabra : ${palabra} , tiene ${palabra.length} caracteres`) // (SALIDA)muestra el resultado final
 }
-function ejercicio_1() {
-    palabra = prompt('Ingrese una palabra')
-    contarcaracteres(palabra)
+function ejercicio_1() { //entrada
+    palabra = prompt('Ingrese una palabra')//se pide la palabra al usuario
+    contarcaracteres(palabra) //aqui se llama a la funcion que realizara el ejercicio con su parametro
 }
 // 2. Contar apariciones de una letra específica
-function contarApariciones(frase, caracter) {
-    let c = 0
-    for (i = 0; i < frase.length; i++) {
-        if (frase[i] == caracter) {
+function contarApariciones(frase, caracter) { //PROCESO
+    let c = 0 //inicia un contador
+    for (i = 0; i < frase.length; i++) { //ciclo que recorrera la palabra
+        if (frase[i] == caracter) { //cuenta cuantas veces se repite el caracter
             c++
         }
-    }
-    console.log(`la letra ${caracter} en la frase ${frase} se repite ${c} veces`)
+    }   //SALIDA
+    console.log(`la letra ${caracter} en la frase ${frase} se repite ${c} veces`) //muestra el resulado pedido
 }
-function ejercicio_2() {
-    frase = prompt("Ingrese la frase")
-    caracter = prompt("Ingrese el caracter que desea ver que se repite")
-    contarApariciones(frase, caracter)
+function ejercicio_2() { //Entrada
+    frase = prompt("Ingrese la frase") //se pide la frase al usuario
+    caracter = prompt("Ingrese el caracter que desea ver que se repite") //se pide el caracter 
+    contarApariciones(frase, caracter) //llamamos a la funcion con los dos parametros
 }
 
 
 
 // 3. Invertir un texto
-function invertir(texto) {
-    let texto_invertido = ""
-    for (let i = texto.length - 1; i >= 0; i--) {
-        texto_invertido += texto[i]
+function invertir(texto) { //PROCESO
+    let texto_invertido = "" //variable que tendra el texto invertido
+    for (let i = texto.length - 1; i >= 0; i--) { //ciclo que recorrera la palabra
+        texto_invertido += texto[i] //Aqui se genera el texto
     }
-    console.log(`${texto_invertido}`)
+    console.log(`${texto_invertido}`) //SALIDA (Muestra el texto invertido)
 }
-function ejercicio_3() {
-    texto = prompt("Ingrese el texto")
-    invertir(texto)
+function ejercicio_3() { //ENTRADA
+    texto = prompt("Ingrese el texto") //se pide el texto a invertir
+    invertir(texto) //Llamamos a la funcion con el parametro
 
 }
+
+
 
 
 // 4. Comparar longitudes de cadenas

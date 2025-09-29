@@ -10,6 +10,7 @@ function ejercicio_1() { //entrada
     palabra = prompt('Ingrese una palabra')//se pide la palabra al usuario
     contarcaracteres(palabra) //aqui se llama a la funcion que realizara el ejercicio con su parametro
 }
+
 // 2. Contar apariciones de una letra específica
 function contarApariciones(frase, caracter) { //PROCESO
     let c = 0 //inicia un contador
@@ -26,8 +27,6 @@ function ejercicio_2() { //Entrada
     contarApariciones(frase, caracter) //llamamos a la funcion con los dos parametros
 }
 
-
-
 // 3. Invertir un texto
 function invertir(texto) { //PROCESO
     let texto_invertido = "" //variable que tendra el texto invertido
@@ -42,10 +41,10 @@ function ejercicio_3() { //ENTRADA
 
 }
 
-
-
-
 // 4. Comparar longitudes de cadenas
+// Entrada: dos cadenas de texto (ej: "Garcia", "Perez")
+// Proceso: se comparan las longitudes de ambas cadenas
+// Salida: se muestra en consola cuál cadena tiene más letras
 function CompararLongitudes(cadena_1, cadena_2) {
     if (cadena_1.length > cadena_2.length) {
         console.log(`"${cadena_1}" tiene mas letras`)
@@ -58,7 +57,11 @@ function ejercicio_4() {
     CompararLongitudes("Garcia", "Perez")
 }
 
+
 // 5. Iniciales de un nombre completo
+// Entrada: un nombre completo en una cadena (ej: "Ana Maria Torres")
+// Proceso: se separa el nombre en partes y se toman las primeras letras
+// Salida: se muestran en consola las iniciales del nombre (ej: "A.M.T.")
 function InicialesNombre(nombre_completo) {
     const segmentos = nombre_completo.split(" ")
     let iniciales = ""
@@ -74,7 +77,11 @@ function ejercicio_5() {
     InicialesNombre("Ana Maria Torres")
 }
 
+
 // 6. Reemplazo de caracteres
+// Entrada: una palabra (ej: "Ingenieria"), una letra a buscar (ej: "e"), y el reemplazo (ej: "3")
+// Proceso: recorrer la palabra, reemplazando cada coincidencia de la letra indicada
+// Salida: se muestra en consola la palabra con los reemplazos (ej: "Ing3ni3ria")
 function ReemplazarCaracteres(palabra, letra, reemplazo) {
     let resultado = ""
 
@@ -106,7 +113,6 @@ function palindroma(palabra) { //llamaos a la funcion polindroma
     } else {
         console.log(`Tu palabra "${palabra}" no es palindroma`)
     }
-
 }
 
 function ejercicio_7() {    //Le ponemos valor a la funcion 
@@ -115,19 +121,18 @@ function ejercicio_7() {    //Le ponemos valor a la funcion
 
 // 8. Frase con mayor cantidad de caracteres
 function caracteres(a, b) {    //llamamos a la funcion
-
     if (a.length < b.length) {  //abrimos una condiconal y le pones length para ver cuantas caracteres tiene la palabra para imprimirla
         console.log(`"${a} " tiene mas caracteres que ${b} `)
     } else {
         console.log(`"${b}" tiene mas caracteres que ${a} `)
     }
 }
+
 function ejercicio_8() {
     caracteres("Me gusta el futbol", "Prefiero el baloncesto");//llamamos a la funcion 
 }
 
 // 9. Contar apariciones de un carácter elegido
-
 function contarfrase(frase, letra) { //llamamos a la funcion 
     let veces = 0;
     for (let i = 0; i < frase.length; i++) {     //abrimos una for para recorrer la frase y encontrar la letra 
@@ -152,6 +157,7 @@ function dividir(frase) {
         console.log(`${segmentos[i]}`)
     }
 }
+
 function ejercicio_10() {    //le agregamos los valores o caracteres a la funcion 
     dividir("me gusta programar")
 }
@@ -172,9 +178,7 @@ function ejercicio_11() { //ENTRADA
     for (i = 0; i < palabras.length; i++) { //ciclo que hare el proceso
         contarcaracteres(palabras[i]) //Funcion del ejercicio uno pero ahora funciona con el arreglo 
     }
-
 }
-
 
 // 2. Contar apariciones de una letra en varias frases
 function ejercicio_12() {
@@ -194,7 +198,6 @@ function ejercicio_12() {
 
 // 3. Invertir varios textos
 function ejercicio_13() { //ENTRADA
-    debugger
     textos = [] // arreglo con los textos
     n = prompt("Ingrese la cantidad de textos a invertir") //se pregunta por la cantidad de texto
     for (c = 0; c < n; c++) { //ciclo que preguntara la palabras
@@ -244,7 +247,6 @@ function ejercicio_15() {
     for (let i = 0; i < nombres.length; i++) {
         InicialesNombre(nombres[i])
     }
-
 }
 
 // 6. Reemplazo de caracteres en varios textos
@@ -315,7 +317,6 @@ function ejercicio_20() {
         } else {
             num.push(n)
             dividir(n)
-
         }
     }
 }
@@ -382,7 +383,10 @@ function ejercicio_23() {
     console.log(`Mayores de edad: ${cantidad_edades}`) //muestra las edades
 }
 
-// 20. Buscar un valor en 4 números.
+// 20. Buscar un valor en 4 números
+// Entrada: un valor a buscar y 4 números ingresados por el usuario
+// Proceso: comparar cada número con el valor buscado
+// Salida: mensaje en consola si se encontró el valor
 function BuscarValor(numero, valor) {
     if (numero === valor) {
         console.log(`Se encontro el numero ${valor}`)
@@ -400,7 +404,11 @@ function ejercicio_24() {
     }
 }
 
-// 21. Concatenar 3 palabras.
+
+// 21. Concatenar 3 palabras
+// Entrada: 3 palabras ingresadas por el usuario
+// Proceso: unir las palabras en una sola cadena separadas por espacio
+// Salida: mostrar en consola las palabras concatenadas
 function ConcatenarPalabras(palabra, concatenadas) {
     if (concatenadas === "") {
         return palabra
@@ -420,7 +428,11 @@ function ejercicio_25() {
     console.log(`Palabras concatenadas: "${concatenado}"`)
 }
 
-// 22. Calcular el cubo de 3 números.
+
+// 22. Calcular el cubo de 3 números
+// Entrada: 3 números ingresados por el usuario
+// Proceso: elevar cada número al cubo (numero ** 3)
+// Salida: mostrar en consola el resultado del cubo de cada número
 function CalcularCubo(numero) {
     console.log(`${numero ** 3}`)
 }
@@ -564,6 +576,9 @@ function ejercicio_33() { //entrada
 }
 
 // 20. Buscar valor en un arreglo
+// Entrada: un valor a buscar y una lista de números ingresados por el usuario (finaliza con 0)
+// Proceso: almacenar los números en un arreglo, recorrerlo y comparar cada elemento con el valor buscado
+// Salida: mensaje en consola si se encontró el valor
 function ejercicio_34() {
     let numeros = [], numero, valor
 
@@ -582,12 +597,16 @@ function ejercicio_34() {
     }
 }
 
+
 // 21. Concatenar palabras de un arreglo
+// Entrada: palabras ingresadas por el usuario (finaliza con cadena vacía)
+// Proceso: almacenar las palabras en un arreglo, luego unirlas en una sola cadena separadas por espacio
+// Salida: mostrar en consola las palabras concatenadas
 function ejercicio_35() {
     let palabras = [], palabra, concatenado = ""
 
     while (true) {
-        palabra = prompt("Ingresa un numero:") || ""
+        palabra = prompt("Ingresa un numero:") || ""   // aquí debería ser "palabra" en lugar de "numero"
         if (palabra === "") {
             break
         }
@@ -601,7 +620,11 @@ function ejercicio_35() {
     console.log(`Palabras concatenadas: "${concatenado}"`)
 }
 
+
 // 22. Cubo de elementos en arreglo
+// Entrada: números ingresados por el usuario (finaliza con 0)
+// Proceso: almacenar los números en un arreglo y calcular el cubo de cada elemento
+// Salida: mostrar en consola el cubo de cada número
 function ejercicio_36() {
     let numeros = [], numero
 

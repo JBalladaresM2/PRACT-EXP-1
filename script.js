@@ -6,8 +6,9 @@
 function contarcaracteres(palabra) { //aqui empieza la funcion (PROCESO)
     console.log(`La palabra : ${palabra} , tiene ${palabra.length} caracteres`) // (SALIDA)muestra el resultado final
 }
+
 function ejercicio_1() { //entrada
-    palabra = prompt('Ingrese una palabra')//se pide la palabra al usuario
+    const palabra = prompt('Ingrese una palabra')//se pide la palabra al usuario
     contarcaracteres(palabra) //aqui se llama a la funcion que realizara el ejercicio con su parametro
 }
 
@@ -22,8 +23,8 @@ function contarApariciones(frase, caracter) { //PROCESO
     console.log(`la letra ${caracter} en la frase ${frase} se repite ${c} veces`) //muestra el resulado pedido
 }
 function ejercicio_2() { //Entrada
-    frase = prompt("Ingrese la frase") //se pide la frase al usuario
-    caracter = prompt("Ingrese el caracter que desea ver que se repite") //se pide el caracter 
+    const frase = prompt("Ingrese la frase") //se pide la frase al usuario
+    const caracter = prompt("Ingrese el caracter que desea ver que se repite") //se pide el caracter 
     contarApariciones(frase, caracter) //llamamos a la funcion con los dos parametros
 }
 
@@ -35,8 +36,9 @@ function invertir(texto) { //PROCESO
     }
     console.log(`${texto_invertido}`) //SALIDA (Muestra el texto invertido)
 }
+
 function ejercicio_3() { //ENTRADA
-    texto = prompt("Ingrese el texto") //se pide el texto a invertir
+    const texto = prompt("Ingrese el texto") //se pide el texto a invertir
     invertir(texto) //Llamamos a la funcion con el parametro
 
 }
@@ -57,7 +59,6 @@ function ejercicio_4() {
     CompararLongitudes("Garcia", "Perez")
 }
 
-
 // 5. Iniciales de un nombre completo
 // Entrada: un nombre completo en una cadena (ej: "Ana Maria Torres")
 // Proceso: se separa el nombre en partes y se toman las primeras letras
@@ -76,7 +77,6 @@ function InicialesNombre(nombre_completo) {
 function ejercicio_5() {
     InicialesNombre("Ana Maria Torres")
 }
-
 
 // 6. Reemplazo de caracteres
 // Entrada: una palabra (ej: "Ingenieria"), una letra a buscar (ej: "e"), y el reemplazo (ej: "3")
@@ -101,7 +101,7 @@ function ejercicio_6() {
 }
 
 // 7. Palabra palíndroma
-function palindroma(palabra) { //llamaos a la funcion polindroma
+function palindroma(palabra) { //llamamos a la funcion polindroma
     let palabra_invertida = ""              //ponemos un let porque la variable va acambiar
 
     for (let i = palabra.length - 1; i >= 0; i--) { //Abrimos un for pata recorrer la palabra por un arreglo
@@ -168,12 +168,12 @@ function ejercicio_10() {    //le agregamos los valores o caracteres a la funcio
 
 // 1. Contar caracteres de varias palabras
 function ejercicio_11() { //ENTRADA
-    debugger 
-    palabras = [] //se genera el arreglo
-    n = parseInt(prompt("Ingrese la cantidad de palabras")) //se pregunta por la cantidad de palabras
+    let palabra
+    let palabras = [] //se genera el arreglo
+    const n = parseInt(prompt("Ingrese la cantidad de palabras")) //se pregunta por la cantidad de palabras
     for (j = 0; j < n; j++) { //ciclo para preguntar las palabras
         palabra = prompt(`Ingrese la palabra ${n + 1} :`) //se pregunta por la palabra
-        palabras.push(palabra) //entra la palaba por el arreglo
+        palabras.push(palabra) //entra la palabra por el arreglo
     }
     for (i = 0; i < palabras.length; i++) { //ciclo que hare el proceso
         contarcaracteres(palabras[i]) //Funcion del ejercicio uno pero ahora funciona con el arreglo 
@@ -182,9 +182,9 @@ function ejercicio_11() { //ENTRADA
 
 // 2. Contar apariciones de una letra en varias frases
 function ejercicio_12() {
-    debugger
-    serieFrases = [] //aca se genera un arreglo con las frases
-    n = parseInt(prompt("Ingrese la cantidad de frases")) //se pregunta por las frases
+    let frases
+    let serieFrases = [] //aca se genera un arreglo con las frases
+    const n = parseInt(prompt("Ingrese la cantidad de frases")) //se pregunta por las frases
     for (j = 0; j < n; j++) { //ciclo
         frases = prompt(`Ingrese la Frase ${j + 1} :`)//se pregunta por cada frase
         serieFrases.push(frases) //entra la frase en el arreglo
@@ -195,11 +195,11 @@ function ejercicio_12() {
     }
 }
 
-
 // 3. Invertir varios textos
 function ejercicio_13() { //ENTRADA
-    textos = [] // arreglo con los textos
-    n = prompt("Ingrese la cantidad de textos a invertir") //se pregunta por la cantidad de texto
+    let palabra
+    let textos = [] // arreglo con los textos
+    const n = prompt("Ingrese la cantidad de textos a invertir") //se pregunta por la cantidad de texto
     for (c = 0; c < n; c++) { //ciclo que preguntara la palabras
         palabra = prompt(`Ingrese la palabra ${c + 1} :`) //se inserta la palabra por el usuario
         textos.push(palabra) //la palabra entra en el arreglo
@@ -208,7 +208,6 @@ function ejercicio_13() { //ENTRADA
         invertir(textos[j]) //funcion del ejercicio 3 
     }
 }
-
 
 // 4. Comparar longitudes de pares de palabras en arreglo
 function ejercicio_14() {
@@ -333,7 +332,8 @@ function CalcularPromedio(suma, cantidad) { //PROCESO
 
 function ejercicio_21() { //ENTRADA
     const cantidad = 5 // Variable con la cantidad a dividir
-    suma = 0
+    let num
+    let suma = 0
     for (i = 0; i < cantidad; i++) { //arreglo para preguntar por cada numero
         num = parseInt(prompt(`Ingrese el numero # ${i + 1} : `)) //se inserta el numero
         suma += num //se suma los numeros
@@ -453,8 +453,8 @@ function multiplicar(n, num) {      // este codigo vamos a reciclar asi que lo e
     }
 }
 function ejercicio_27() {
-    n = parseInt(prompt("Ingrese un numero para q aparesca la tabla"))  //pedimos los datos al usuario
-    num = parseInt(prompt("ingrese el limite de su tabla "))        // y el limite de la tabla
+    const n = parseInt(prompt("Ingrese un numero para q aparesca la tabla"))  //pedimos los datos al usuario
+    const num = parseInt(prompt("ingrese el limite de su tabla "))        // y el limite de la tabla
     multiplicar(n, num)
 }
 
@@ -493,7 +493,6 @@ function ejercicio_29() {
 
 // 26. Sumar dos grupos
 function Sumar(A, B, C) {   //abrimos un for para recorrer
-    
     for (let i = 0; i < A.length; i++) { //le ponemos a la A el length y le enviamos a C con un psush sumando en el proceso
         C.push(A[i] + B[i]);
 
@@ -517,7 +516,7 @@ function ejercicio_31() { //ENTRADA
     let numero, numeros = [], suma = 0 // se asignan las variables
 
     while (true) {
-        numero = parseInt(prompt("Ingresa un numero:")) || 0 //s pregunta por el numero
+        numero = parseInt(prompt("Ingresa un numero:")) || 0 //se pregunta por el numero
         if (numero === 0) {
             break
         }

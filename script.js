@@ -575,43 +575,43 @@ function ejercicio_33() { //entrada
     console.log(`Mayores de edad: ${cantidad_edades}`) //muestra el resultado 
 }
 
+// Funcion para crear arreglos numericos o de texto
+function CrearArreglo(tipo) {
+    let arreglo = [], valor
+    while (true) {
+        if (tipo === "numerico") {
+            valor = parseInt(prompt("Ingresa un numero:") || 0)
+        } else if (tipo === "texto") {
+            valor = prompt("Ingresa una palabra:") || ""
+        }
+        if (valor === "" || valor === 0) {
+            break
+        }
+        arreglo.push(valor)
+    }
+    return arreglo
+}
+
 // 20. Buscar valor en un arreglo
 // Entrada: un valor a buscar y una lista de números ingresados por el usuario (finaliza con 0)
 // Proceso: almacenar los números en un arreglo, recorrerlo y comparar cada elemento con el valor buscado
 // Salida: mensaje en consola si se encontró el valor
 function ejercicio_34() {
-    let numeros = [], numero, valor
-
-    valor = parseInt(prompt("Ingresa el valor a buscar"))
-
-    while (true) {
-        numero = parseInt(prompt("Ingresa un numero:")) || 0
-        if (numero === 0) {
-            break
-        }
-        numeros.push(numero)
-    }
+    const valor = parseInt(prompt("Ingresa el valor a buscar"))
+    const numeros = CrearArreglo("numerico")
 
     for (let i = 0; i < numeros.length; i++) {
         BuscarValor(numeros[i], valor)
     }
 }
 
-
 // 21. Concatenar palabras de un arreglo
 // Entrada: palabras ingresadas por el usuario (finaliza con cadena vacía)
 // Proceso: almacenar las palabras en un arreglo, luego unirlas en una sola cadena separadas por espacio
 // Salida: mostrar en consola las palabras concatenadas
 function ejercicio_35() {
-    let palabras = [], palabra, concatenado = ""
-
-    while (true) {
-        palabra = prompt("Ingresa un numero:") || ""   // aquí debería ser "palabra" en lugar de "numero"
-        if (palabra === "") {
-            break
-        }
-        palabras.push(palabra)
-    }
+    let concatenado = ""
+    const palabras = CrearArreglo("texto")
 
     for (let i = 0; i < palabras.length; i++) {
         concatenado = ConcatenarPalabras(palabras[i], concatenado)
@@ -626,16 +626,7 @@ function ejercicio_35() {
 // Proceso: almacenar los números en un arreglo y calcular el cubo de cada elemento
 // Salida: mostrar en consola el cubo de cada número
 function ejercicio_36() {
-    let numeros = [], numero
-
-    while (true) {
-        numero = parseInt(prompt("Ingresa un numero:")) || 0
-        if (numero === 0) {
-            break
-        }
-        numeros.push(numero)
-    }
-
+    const numeros = CrearArreglo("numerico")
     for (let i = 0; i < numeros.length; i++) {
         CalcularCubo(numeros[i])
     }
